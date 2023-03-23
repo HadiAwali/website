@@ -50,10 +50,9 @@ nav ul li a {
 	text-decoration: none;
 }
 
-.slider {
-	display: flex;
-	overflow-x: scroll;
-	margin: 50px 0;
+.swiper {
+  width: 600px;
+  height: 300px;
 }
 
 .slide {
