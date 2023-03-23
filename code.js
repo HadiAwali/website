@@ -1,5 +1,5 @@
 <script>
-  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9.1.1/swiper-bundle.esm.browser.min.js'
 </script>
 
 window.mySwipe = new Swiper (document.getElementById ('slider'), {
