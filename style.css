@@ -1,0 +1,182 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+}
+
+.hero {
+	background-color: #f2f2f2;
+	padding: 100px;
+	text-align: center;
+}
+
+.hero h1 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+.hero p {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.btn {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.slider {
+	display: flex;
+	overflow-x: scroll;
+	margin: 50px 0;
+}
+
+.slide {
+	flex: 0 0 auto;
+	margin-right: 20px;
+}
+
+.slide img {
+	width: 800px;
+	height: 400px;
+	object-fit: cover;
+}
+
+.services {
+	background-color: #f2f2f2;
+	padding: 100px;
+	text-align: center;
+}
+
+.services h2 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+.service {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 50px 0;
+}
+
+.service img {
+	width: 400px;
+	height: 300px;
+	object-fit: cover;
+	margin-bottom: 20px;
+}
+
+.service h3 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.service p {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.works {
+	padding: 100px;
+	text-align: center;
+}
+
+.works h2 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+.work {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 50px 0;
+}
+
+.work img {
+	width: 400px;
+	height: 300px;
+	object-fit: cover;
+	margin-bottom: 20px;
+}
+
+.work h3 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.work p {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.counter {
+	background-color: #333;
+	color: #fff;
+	padding: 100px;
+	text-align: center;
+}
+
+.counter h2 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+.count {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 50px 0;
+}
+
+.count .number {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+.count .text {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}
+
+.social a {
+	color: #fff;
+	font-size: 24px;
+	margin-right: 20px;
+}
+
+.fa {
+	display: inline-block
