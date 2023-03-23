@@ -1,7 +1,7 @@
 <script type="module" src="./swiper/swiper-bundle.esm.browser.min.js"></script>
 const swiper = new Swiper('.swiper', {
   // Optional parameters
-  direction: 'vertical',
+  direction: 'horizontal',
   loop: true,
 
   // If we need pagination
