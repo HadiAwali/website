@@ -1,5 +1,4 @@
-import { Swiper } from './swiper/swiper-bundle.esm.browser.min.js'
-
+<script type="module" src="./swiper/swiper-bundle.esm.browser.min.js"></script>
 window.mySwipe = new Swiper (document.getElementById ('slider'), {
   startSlide: 2,
   speed: 400,
