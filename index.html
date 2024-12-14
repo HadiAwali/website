@@ -3,18 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example Website</title>
+    <title>Your Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1>Your Name</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<div class="header">
-<img src="https://i.suar.me/OX1Z5/s" alt="HadiAwali">
-<h1>Hadi Awali</h1>
-</div>
-<p>Hdhdhdjsjsshsjsjsjdjsjssusushshshshdh</p>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Brief introduction about yourself. Your skills, experience, and anything else that showcases who you are.</p>
+        </div>
+    </section>
 
-<!-- End of body tag -->
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project">
+                <h3>Project Title 1</h3>
+                <p>Description of your project. What technologies you used and what you learned.</p>
+            </div>
+            <div class="project">
+                <h3>Project Title 2</h3>
+                <p>Description of your project. What technologies you used and what you learned.</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Name. All rights reserved.</p>
+            <ul class="socials">
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
-<!-- End of html tag -->
 </html>
