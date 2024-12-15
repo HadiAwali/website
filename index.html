@@ -1,9 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Responsive Footer</title>
-    <!-- Link to Bootstrap CSS -->
+    <title>Custom Footer</title>
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Footer Styling */
+        .footer {
+            background-color: #000; /* Black Background */
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Light shadow effect */
+        }
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: white; /* Circle Background */
+            color: black; /* Icon Color */
+            transition: all 0.3s ease;
+        }
+        .social-icons a:hover {
+            background-color: #007bff; /* Hover Effect */
+            color: white;
+        }
+        .footer-text {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
     <!-- Main Content -->
@@ -11,25 +44,25 @@
         <p>This is the main content of the page.</p>
     </main>
 
-    <!-- Footer Section -->
-    <footer class="bg-dark text-white text-center text-lg-start mt-5">
-        <div class="container p-4">
-            <!-- Copyright -->
-            <div class="row">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <p class="mb-0">&copy; 2024 Your Website. All rights reserved.</p>
-                </div>
-                <!-- Social Links -->
-                <div class="col-lg-6 text-lg-end">
-                    <a href="https://instagram.com/yourprofile" class="text-white me-3" target="_blank">Instagram</a>
-                    <a href="https://github.com/yourprofile" class="text-white me-3" target="_blank">GitHub</a>
-                    <a href="mailto:youremail@example.com" class="text-white">Email</a>
-                </div>
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <!-- Social Icons -->
+            <div class="social-icons mb-3">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <!-- Copyright Text -->
+            <div class="footer-text">
+                <p>&copy; 2024; Designed by <strong>YOUR NAME</strong></p>
             </div>
         </div>
     </footer>
 
-    <!-- Link to Bootstrap JS -->
+    <!-- Bootstrap JS -->
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
