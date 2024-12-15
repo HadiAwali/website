@@ -1,5 +1,6 @@
-// theme-color.js
 window.addEventListener('DOMContentLoaded', function () {
+    alert('JavaScript is working!'); // Will show a pop-up alert message when the script runs
+    
     // Create a meta tag dynamically
     const metaThemeColor = document.createElement('meta');
     metaThemeColor.name = 'theme-color';
