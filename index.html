@@ -34,19 +34,21 @@
         }
         /* Bottom Copyright Bar */
         .footer-bottom {
-            background-color: #0a0a0a; /* Darker shade (10% darker) */
-            color: #ccc; /* Slightly lighter text */
+            background-color: #0a0a0a; /* Darker shade */
+            color: #ccc; /* Lighter text */
             text-align: center;
             padding: 10px 0;
             position: fixed;
             bottom: 0;
+            left: 0;
             width: 100%;
+            z-index: 1000; /* Ensures visibility */
         }
     </style>
 </head>
 <body>
     <!-- Main Content -->
-    <main class="container mt-5">
+    <main class="container mt-5 mb-5">
         <p>This is the main content of the page.</p>
     </main>
 
