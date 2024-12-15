@@ -9,10 +9,10 @@
     <style>
         /* Footer Styling */
         .footer {
-            background-color: #000; /* Black Background */
+            background-color: #000; /* Main Footer Color */
             color: white;
             padding: 20px 0;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Light shadow effect */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Shadow effect */
         }
         .social-icons a {
             color: white;
@@ -32,9 +32,15 @@
             background-color: #007bff; /* Hover Effect */
             color: white;
         }
-        .footer-text {
-            margin-top: 10px;
-            font-size: 14px;
+        /* Bottom Copyright Bar */
+        .footer-bottom {
+            background-color: #0a0a0a; /* Darker shade (10% darker) */
+            color: #ccc; /* Slightly lighter text */
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -49,18 +55,17 @@
         <div class="container">
             <!-- Social Icons -->
             <div class="social-icons mb-3">
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-            </div>
-            <!-- Copyright Text -->
-            <div class="footer-text">
-                <p>&copy; 2024; Designed by <strong>YOUR NAME</strong></p>
             </div>
         </div>
     </footer>
+
+    <!-- Bottom Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2024; Designed by <strong>YOUR NAME</strong></p>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
