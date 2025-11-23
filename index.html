@@ -3,122 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#010101"> <!-- Chrome, Firefox, Opera -->
-<meta name="msapplication-navbutton-color" content="#010101"> <!-- Windows Phone -->
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- iOS -->
-    <title>Personal Page</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <!-- FontAwesome Icons CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Link to External CSS File -->
-    <link rel="stylesheet" href="styles.css">
+    <title>Hadi Awali | Coming Soon</title>
 
-    
+    <style>
+        /* Reset page defaults */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full-screen dark background */
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #0a0f24, #0a0017);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        /* Center box */
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+
+        /* Your name */
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #4da6ff;
+            text-shadow: 0 0 10px #007bff;
+        }
+
+        /* Typing animation */
+        .typing {
+            font-size: 24px;
+            border-right: 3px solid #4da6ff;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 3s steps(30, end) forwards, blink .7s infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 260px }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Under construction message */
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            opacity: 0.8;
+        }
+
+        /* Simple glowing button */
+        .btn {
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            background: #4da6ff;
+            color: #fff;
+            border-radius: 6px;
+            cursor: default;
+            box-shadow: 0 0 15px #007bff;
+            opacity: 0.8;
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Main Content Section -->
-    <main class="container mt-5">
-        <section id="about-me" class="text-center mb-5">
-            <!-- Image -->
-            <img src="your-image.jpg" alt="Your Image" class="img-fluid rounded-circle" style="width: 150px; height: 150px;">
-            <h2 class="mt-3">About Me</h2>
-            <p class="lead">Hi, I am Hadi Awali. I am a passionate developer with experience in web and mobile development...</p>
-           <a href="test.html" class="btn btn-primary">Go to Test Page</a>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="mb-5">
-            <h2 class="text-center">My Skills</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <h4>Frontend</h4>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h4>Backend</h4>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>PHP</li>
-                        <li>Express</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h4>Tools</h4>
-                    <ul>
-                        <li>Git</li>
-                        <li>Docker</li>
-                        <li>Jenkins</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Achievements Section -->
-        <section id="achievements" class="mb-5">
-            <h2 class="text-center">My Achievements</h2>
-            <ul>
-                <li>Certified Web Developer from XYZ Institute</li>
-                <li>Contributed to Open-Source Projects</li>
-                <li>Completed a 6-month Internship at ABC Corp</li>
-            </ul>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="mb-5">
-            <h2 class="text-center">My Education</h2>
-            <ul>
-                <li>Bachelor's Degree in Computer Science - University of ABC (2019 - 2023)</li>
-                <li>Web Development Bootcamp - XYZ Institute (2022)</li>
-            </ul>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="mb-5">
-            <h2 class="text-center">My Projects</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <h4>Project 1</h4>
-                    <p>A web app that helps users track their tasks.</p>
-                </div>
-                <div class="col-md-4">
-                    <h4>Project 2</h4>
-                    <p>A mobile app for managing to-do lists on Android.</p>
-                </div>
-                <div class="col-md-4">
-                    <h4>Project 3</h4>
-                    <p>An e-commerce website built with React and Node.js.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-3">
-                    <div class="social-icons">
-                        <a href="https://github.com/HadiAwali" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.instagram.com/hadiawali_/profilecard/?igsh=d2szeDlxZGNwYnNh" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="mailto: hadirealawali@gmail.com"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p class="mb-0">
-                <i class="fas fa-copyright"></i> <strong>Hadi Awali</strong>. ALL rights reserved.
-            </p>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+        <h1>Hadi Awali</h1>
+        <div class="typing">Portfolio Coming Soon...</div>
+        <p>Website Under Construction</p>
+        <button class="btn">Stay Tuned</button>
+    </div>
 </body>
 </html>
