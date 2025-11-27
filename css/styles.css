@@ -1,0 +1,101 @@
+/* GLOBAL PAGE STYLE */
+body {
+    background: linear-gradient(135deg, #0a0f24, #0a0017);
+    color: white;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+}
+
+/* SECTION TITLES */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #4da6ff;
+    text-shadow: 0 0 10px #007bff;
+}
+
+/* Descriptions under titles */
+.section-desc {
+    text-align: center;
+    max-width: 700px;
+    margin: 10px auto;
+    opacity: 0.85;
+}
+
+/* HERO SECTION */
+#hero {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #000618, #001433);
+}
+
+.hero-title {
+    font-size: 52px;
+    font-weight: 800;
+    color: #4da6ff;
+    text-shadow: 0 0 15px #007bff;
+}
+
+/* Typing text under hero title */
+.typing-text {
+    font-size: 26px;
+    margin-top: 10px;
+    min-height: 40px;
+}
+
+/* Small text */
+.hero-sub {
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* Hero button */
+.hero-btn {
+    margin-top: 25px;
+    padding: 12px 30px;
+    font-size: 18px;
+    background: #4da6ff;
+    border: none;
+    box-shadow: 0 0 15px #007bff;
+}
+
+/* SKILL CARDS */
+.skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #007bff;
+}
+
+/* PROJECT CARDS */
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #4da6ff;
+}
+
+/* CONTACT FORM */
+.contact-form input,
+.contact-form textarea {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #4da6ff;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    background: rgba(0,0,0,0.2);
+    margin-top: 40px;
+    color: white;
+    font-size: 14px;
+}
