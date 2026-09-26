@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hadi Awali — Android Developer</title>
+<meta name="description" content="Personal site of Hadi Awali, Android developer. Creator of CodeSnap, a privacy-first QR code and barcode scanner.">
+<style>
+  :root {
+    --primary: #6F50E8;
+    --bg: #F7F7FB;
+    --surface: #FFFFFF;
+    --text: #181A27;
+    --muted: #5B5E70;
+    --border: #E4E4EF;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  header {
+    background: var(--primary);
+    color: #FFFFFF;
+    padding: 40px 16px;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  header .wrap { padding-top: 8px; padding-bottom: 8px; }
+  .topnav {
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .topnav a { color: #FFFFFF; text-decoration: none; opacity: 0.92; }
+  .topnav a:hover { text-decoration: underline; }
+  h1 {
+    margin: 0 0 6px;
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 750;
+  }
+  header .tagline {
+    margin: 0;
+    font-size: 17px;
+    opacity: 0.94;
+  }
+  header .sub {
+    margin: 6px 0 0;
+    font-size: 15px;
+    opacity: 0.85;
+  }
+  main { padding: 24px 0 8px; }
+  section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  h2 {
+    margin: 0 0 10px;
+    font-size: 19px;
+    line-height: 1.35;
+    font-weight: 650;
+    color: var(--primary);
+  }
+  p { margin: 0 0 12px; }
+  p:last-child { margin-bottom: 0; }
+  a { color: var(--primary); }
+  .app-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .app-info { flex: 1 1 320px; }
+  .app-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+  .pill {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 650;
+    color: var(--primary);
+    background: #EFEBFF;
+    border: 1px solid #D9D0FF;
+    border-radius: 999px;
+    padding: 2px 10px;
+    margin-bottom: 8px;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .btn {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 8px 14px;
+  }
+  .btn:hover { filter: brightness(1.07); }
+  .btn.ghost {
+    color: var(--primary);
+    background: transparent;
+  }
+  footer {
+    padding: 8px 0 40px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  footer .wrap { border-top: 1px solid var(--border); padding-top: 16px; }
+  @media (max-width: 560px) {
+    header { padding: 28px 0; }
+    h1 { font-size: 26px; }
+    section { padding: 16px; border-radius: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav class="topnav">
+      <a href="#apps">Apps</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <h1>Hadi Awali</h1>
+    <p class="tagline">Android developer</p>
+    <p class="sub">Focused, privacy-respecting utility apps — built end to end.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="apps">
+    <h2>Apps</h2>
+    <div class="app-card">
+      <div class="app-info">
+        <p class="app-name">CodeSnap</p>
+        <span class="pill">Coming to Google Play</span>
+        <p>A fast, privacy-first QR code and barcode scanner and generator for Android. Scan with the camera or from your gallery, generate QR codes for text, Wi-Fi, contacts and more — everything is processed on your device, no account required.</p>
+        <div class="links">
+          <a class="btn" href="https://hadiawali.github.io/website/codesnap/privacy/">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I build Android apps with classic, dependable stacks and a strong preference for keeping user data on the user's device. CodeSnap is the first of these to be published publicly — more may follow.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:developer.hadiawali@gmail.com">developer.hadiawali@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/HadiAwali">github.com/HadiAwali</a></p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Hadi Awali</p>
+  </div>
+</footer>
+
+</body>
+</html>
