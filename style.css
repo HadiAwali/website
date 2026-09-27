@@ -31,9 +31,9 @@ section.active{display:block; animation:fade .3s ease;}
 .hero h1{font-size:2.6rem; line-height:1.15; margin:0 0 18px; font-weight:600;}
 .hero p{color:var(--text-dim); font-size:1.05rem; max-width:46ch; margin:0 0 26px;}
 .hero .cta{display:inline-block; padding:11px 20px; background:var(--accent); color:#0F1115; font-weight:600; border-radius:6px; text-decoration:none; font-size:.95rem;}
-.stage{height:240px; border-radius:12px; position:relative; overflow:hidden; background:linear-gradient(150deg, var(--surface-2), var(--bg));}
+.stage{height:240px; border-radius:12px; position:relative; overflow:hidden; background:radial-gradient(49% 49% at 50% 50%, rgba(140,111,255,.20), transparent 100%);}
 .term{padding:16px;}
-.term .win{background:var(--bg); border:1px solid var(--border); border-radius:10px; overflow:hidden; box-shadow:0 20px 40px -20px #000;}
+.term .win{background:var(--bg); border:1px solid var(--border); border-radius:10px; overflow:hidden; box-shadow:0 24px 48px -24px #000, 0 0 20px rgba(140,111,255,.20), 0 0 0 1px rgba(140,111,255,.12);}
 .term .bar{background:var(--surface-2); padding:8px 12px; font-family:'JetBrains Mono',monospace; font-size:.68rem; color:var(--text-dim);}
 .term .body{padding:14px; font-family:'JetBrains Mono',monospace; font-size:.74rem; line-height:1.9; color:var(--text-dim);}
 .term .prompt{color:var(--accent);}
@@ -50,8 +50,8 @@ h2.section-title{font-size:1.7rem; margin:0 0 8px; font-weight:600;}
 .card-cover{aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; background:linear-gradient(150deg, var(--surface-2), var(--bg));}
 .card:nth-child(1) .card-cover, .card:nth-child(3) .card-cover{background:linear-gradient(150deg, #2A2140, #0F1115);}
 .card:nth-child(2) .card-cover{background:linear-gradient(150deg, #3A2F17, #0F1115);}
-.card-icon{width:56px; height:56px; border-radius:14px; background:var(--surface); display:flex; align-items:center; justify-content:center; box-shadow:0 10px 24px -8px #000;}
-.card-icon svg{width:28px; height:28px; stroke:var(--accent);}
+.card-icon{width:70%; aspect-ratio:1/1; border-radius:22%; background:var(--surface); display:flex; align-items:center; justify-content:center; box-shadow:0 18px 40px -12px #000;}
+.card-icon svg{width:50%; height:50%; stroke:var(--accent);}
 .card:nth-child(2) .card-icon svg{stroke:var(--amber);}
 .card-body{padding:16px 18px 18px; display:flex; flex-direction:column; gap:6px;}
 .card-body h3{margin:0; font-size:1.05rem; font-weight:600;}
@@ -74,7 +74,7 @@ button.submit{padding:11px 22px; background:var(--accent); color:#0F1115; border
 .app-banner{text-align:center; padding:52px 24px 42px; border-radius:20px; margin-bottom:36px; background:linear-gradient(160deg, #241C3A, var(--bg)); border:1px solid var(--border);}
 .app-banner.amber{background:linear-gradient(160deg, #332811, var(--bg));}
 .app-icon-lg{width:84px; height:84px; border-radius:22px; margin:0 auto 18px; display:flex; align-items:center; justify-content:center; background:var(--surface); box-shadow:0 16px 34px -14px #000;}
-.app-icon-lg svg{width:38px; height:38px; stroke:var(--accent);}
+.app-icon-lg svg{width:47px; height:47px; stroke:var(--accent);}
 .app-banner.amber .app-icon-lg svg{stroke:var(--amber);}
 .app-banner h2{margin:0 0 4px; font-size:2rem;}
 .badge{font-size:.72rem; padding:3px 10px; border-radius:20px; background:var(--surface-2); color:var(--text-dim); display:inline-block; margin-bottom:14px;}
