@@ -1,19 +1,23 @@
-  const routes = ['home','about','contact','project-codesnap','project-discordbot','project-notebank','project-kemakzi'];
+  const routes = ['home','about','contact','project-codesnap','privacy'];
 
   function render(){
     let hash = location.hash.replace('#','') || 'home';
     if(!routes.includes(hash)) hash = 'home';
+    const activeId = hash === 'privacy' ? 'project-codesnap' : hash;
     routes.forEach(r=>{
       const el = document.getElementById(r);
-      if(el) el.classList.toggle('active', r === hash);
+      if(el) el.classList.toggle('active', r === activeId);
     });
     document.querySelectorAll('#nav a').forEach(a=>{
       a.classList.toggle('active', a.dataset.r === hash);
     });
+    if(hash === 'privacy'){
+      const privacyTab = document.querySelector('#project-codesnap .tab[data-tab="privacy"]');
+      if(privacyTab) privacyTab.click();
+    }
     window.scrollTo(0,0);
   }
   window.addEventListener('hashchange', render);
-  render();
 
   // tabs within project pages
   document.querySelectorAll('.project-page').forEach(page=>{
@@ -36,3 +40,5 @@
     const body = encodeURIComponent(msg + '\n\n— ' + name + ' (' + email + ')');
     window.location.href = 'mailto:developer.hadiawali@gmail.com?subject=Portfolio%20contact&body=' + body;
   });
+
+  render();

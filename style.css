@@ -72,16 +72,12 @@
     position:relative;
   }
   .card:nth-child(1) .card-cover{background:linear-gradient(150deg, #2A2140, #0F1115);}
-  .card:nth-child(2) .card-cover{background:linear-gradient(150deg, #3A2F17, #0F1115);}
   .card:nth-child(3) .card-cover{background:linear-gradient(150deg, #2A2140, #0F1115);}
-  .card:nth-child(4) .card-cover{background:linear-gradient(150deg, #3A2F17, #0F1115);}
   .card-icon{
     width:56px; height:56px; border-radius:14px; background:var(--surface);
     display:flex; align-items:center; justify-content:center; box-shadow:0 10px 24px -8px #000;
   }
   .card-icon svg{width:28px; height:28px; stroke:var(--accent);}
-  .card:nth-child(2) .card-icon svg{stroke:var(--amber);}
-  .card:nth-child(4) .card-icon svg{stroke:var(--amber);}
   .card-body{padding:16px 18px 18px; display:flex; flex-direction:column; gap:6px;}
   .card-body h3{margin:0; font-size:1.05rem; font-weight:600;}
   .card-body p{margin:0; color:var(--text-dim); font-size:.88rem;}
@@ -125,7 +121,6 @@
   .tabpane h4:first-child{margin-top:0;}
   .tabpane p, .tabpane li{color:var(--text-dim); font-size:.94rem;}
   .tabpane ul{padding-left:20px;}
-  .legal-note{margin-top:30px; padding:14px 16px; border:1px dashed var(--border); border-radius:8px; font-size:.82rem; color:var(--text-dim); font-style:italic;}
 
   footer{border-top:1px solid var(--border); padding:44px 0 30px; color:var(--text-dim); font-size:.88rem; margin-top:20px;}
   .footer-grid{display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-bottom:30px; max-width:420px;}

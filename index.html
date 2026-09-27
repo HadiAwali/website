@@ -41,7 +41,7 @@
     </div>
 
     <h2 class="section-title">Projects</h2>
-    <p class="section-sub">Four things I've shipped or am actively building — pick one to see how it works, and its privacy policy and terms.</p>
+    <p class="section-sub">One thing I've shipped so far — tap it to see how it works, and its privacy policy and terms.</p>
 
     <div class="cards">
       <button class="card" onclick="location.hash='#project-codesnap'">
@@ -50,30 +50,6 @@
           <h3>CodeSnap</h3>
           <p>Privacy-first QR code &amp; barcode scanner and generator for Android</p>
           <span class="tag">Kotlin · Android</span>
-        </span>
-      </button>
-      <button class="card" onclick="location.hash='#project-discordbot'">
-        <span class="card-cover"><span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M3 9h18"></path><circle cx="7" cy="6.5" r=".6" fill="currentColor" stroke="none"></circle><circle cx="9.5" cy="6.5" r=".6" fill="currentColor" stroke="none"></circle><path d="M8 14l2 2-2 2M13 18h3"></path></svg></span></span>
-        <span class="card-body">
-          <h3>Discord Bot Control Panel</h3>
-          <p>Locally-hosted dashboard for managing a Discord bot</p>
-          <span class="tag">Node.js</span>
-        </span>
-      </button>
-      <button class="card" onclick="location.hash='#project-notebank'">
-        <span class="card-cover"><span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h11a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"></path><path d="M4 7h1M4 11h1M4 15h1M9 8h6M9 12h4"></path></svg></span></span>
-        <span class="card-body">
-          <h3>NoteBank</h3>
-          <p>Cross-platform Markdown notes — Android, iOS, Windows, macOS</p>
-          <span class="tag">Flutter</span>
-        </span>
-      </button>
-      <button class="card" onclick="location.hash='#project-kemakzi'">
-        <span class="card-cover"><span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="4"></rect><path d="M7 10v4M5 12h4"></path><circle cx="16" cy="11" r="1" fill="currentColor" stroke="none"></circle><circle cx="18.5" cy="13.5" r="1" fill="currentColor" stroke="none"></circle></svg></span></span>
-        <span class="card-body">
-          <h3>Kemakzi</h3>
-          <p>Arcade-style FPV drone flight game, physics-based</p>
-          <span class="tag">Unity</span>
         </span>
       </button>
     </div>
@@ -169,10 +145,39 @@
     </div>
 
     <div class="tabpane" data-pane="privacy">
-      <h4>Privacy Policy</h4>
-      <p>No account or sign-up is required. Your scan and generation history stays on your device. Camera frames are processed locally and never uploaded. Ads by Google AdMob and crash reports via Firebase Crashlytics are the only third-party processing.</p>
-      <p><strong><a href="codesnap/privacy/">Read the full privacy policy</a></strong></p>
-      <p>Effective date: 26 September 2026</p>
+      <p><strong>Effective date:</strong> 26 September 2026</p>
+      <h4>1. What we don't collect</h4>
+      <p>CodeSnap is a scanner and generator app. To be clear about what it does <em>not</em> do:</p>
+      <ul>
+        <li>No account or sign-up: there is no registration, login, or user profile.</li>
+        <li>No collection of personal data by the app itself: we do not ask for your name, email, phone number, or contacts, and we do not upload the content you scan or generate.</li>
+        <li>No sale of personal data. We do not sell or rent data about you to anyone.</li>
+        <li>Scan and generation history is stored only on your device, in local app storage, and can be deleted at any time from the app's history screen (or by clearing the app's data in system settings).</li>
+      </ul>
+      <p>Some data <em>is</em> processed by third-party services that the app integrates — advertising and crash analytics — as described below.</p>
+      <h4>2. Camera</h4>
+      <p>The camera permission is used only for live scanning: frames are decoded in real time to find and read QR codes and barcodes.</p>
+      <ul>
+        <li>Camera frames are processed on your device.</li>
+        <li>Frames are never recorded to video or stored as images.</li>
+        <li>Frames are never transmitted off your device for scanning purposes.</li>
+      </ul>
+      <p>The flashlight toggle only controls the camera flash for scanning in low light.</p>
+      <h4>3. Images (gallery scans and exports)</h4>
+      <p>When you choose to decode a code from an image in your gallery, or to export/save a generated code as an image file, that image is processed locally on your device. Image contents are not uploaded to our servers — CodeSnap has no backend servers that receive your images.</p>
+      <h4>4. Advertising</h4>
+      <p>CodeSnap displays ads, served by Google AdMob. AdMob may collect and use the Advertising ID and device/ad interaction data to serve and measure ads, in accordance with Google's policy. You can reset or opt out of personalized advertising through your device's Google Play settings.</p>
+      <p>See Google's privacy policy for details: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+      <p>Purchasing Premium removes ads, but does not change the data practices described here beyond no longer requesting ads.</p>
+      <h4>5. Analytics and crash reporting</h4>
+      <p>CodeSnap uses Firebase Crashlytics to collect anonymous crash and diagnostic data — for example, stack traces, device/OS version, and the app version at the time of a crash. This data is used only to find and fix bugs. It is not used to identify you personally.</p>
+      <p>See Google Firebase's privacy information: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></p>
+      <h4>6. Children</h4>
+      <p>CodeSnap is not directed at children under 13. The app does not knowingly collect personal information from children. If you believe a child has provided personal information through a third-party service used by the app, please contact us and we will take appropriate action.</p>
+      <h4>7. Contact</h4>
+      <p>Questions about this policy or your data can be sent by email to <a href="mailto:developer.hadiawali@gmail.com">developer.hadiawali@gmail.com</a>.</p>
+      <h4>8. Changes to this policy</h4>
+      <p>This policy may be updated as the app changes. The current version always lives on this page; the effective date above tells you when this version started applying.</p>
     </div>
 
     <div class="tabpane" data-pane="terms">
@@ -183,168 +188,6 @@
       <p>The app is provided as-is, with no warranty of any kind.</p>
       <h4>Changes</h4>
       <p>Features may change between updates; continued use after an update means you accept the revised terms.</p>
-    </div>
-  </section>
-
-  <!-- PROJECT: DISCORD BOT CONTROL PANEL -->
-  <section id="project-discordbot" class="project-page" data-app="Discord Bot Control Panel">
-    <a class="back-link" href="#home">← All projects</a>
-    <div class="proj-head"><h2>Discord Bot Control Panel</h2><span class="badge">Node.js</span></div>
-    <p class="proj-tagline">A locally-hosted dashboard for starting, restarting, and monitoring a Discord bot without touching the terminal.</p>
-    <p class="stack-line mono">Node.js · Discord.js v14 · Express</p>
-
-    <div class="tabs">
-      <button class="tab active" data-tab="overview">Overview</button>
-      <button class="tab" data-tab="privacy">Privacy Policy</button>
-      <button class="tab" data-tab="terms">Terms of Service</button>
-    </div>
-
-    <div class="tabpane active" data-pane="overview">
-      <h4>What it does</h4>
-      <p>A control panel for a Discord bot: a Discord-themed dashboard with a lifecycle menu to start, restart, stop, and kill the bot process from the browser instead of a terminal.</p>
-      <h4>Under the hood</h4>
-      <ul>
-        <li>Built with Node.js, Discord.js v14, and an Express/vanilla-JS front end</li>
-        <li>Session-token authentication guards the dashboard</li>
-        <li>Runs locally, alongside the bot process it manages</li>
-      </ul>
-    </div>
-
-    <div class="tabpane" data-pane="privacy">
-      <h4>Privacy Policy</h4>
-      <p>Last updated: draft. This describes what the control panel collects and how it's used.</p>
-      <h4>Information collected</h4>
-      <ul>
-        <li>No personal data is collected by the panel itself — it runs locally on the operator's own machine</li>
-        <li>A session token is used to authenticate access to the dashboard; it isn't shared externally</li>
-        <li>The panel reads and displays data from the Discord bot it controls (server names, bot status), which stays local</li>
-      </ul>
-      <h4>How it's used</h4>
-      <p>All data stays on the machine running the panel. Nothing is sent to a third-party server by the panel itself.</p>
-      <div class="legal-note">Template text — update this if you deploy the panel remotely, add multiple operators, or connect it to external logging/analytics.</div>
-    </div>
-
-    <div class="tabpane" data-pane="terms">
-      <h4>Terms of Service</h4>
-      <h4>Use of the tool</h4>
-      <p>This panel is provided for personal or internal use in managing your own Discord bot. You're responsible for how the bot it controls behaves on Discord.</p>
-      <h4>No warranty</h4>
-      <p>Provided as-is; the operator is responsible for keeping session tokens and environment variables secure.</p>
-      <h4>Changes</h4>
-      <p>Features and controls may change as the panel is developed further.</p>
-      <div class="legal-note">Template text — have this reviewed before sharing the panel with other operators.</div>
-    </div>
-  </section>
-
-  <!-- PROJECT: NOTEBANK -->
-  <section id="project-notebank" class="project-page" data-app="NoteBank">
-    <a class="back-link" href="#home">← All projects</a>
-    <div class="proj-head"><h2>NoteBank</h2><span class="badge">Flutter</span></div>
-    <p class="proj-tagline">A multi-platform Markdown note app for Android, iOS, Windows, and macOS, with folders, tags, teams, and export built in.</p>
-    <p class="stack-line mono">Flutter · Dart · Firebase · SQLite</p>
-
-    <div class="tabs">
-      <button class="tab active" data-tab="overview">Overview</button>
-      <button class="tab" data-tab="privacy">Privacy Policy</button>
-      <button class="tab" data-tab="terms">Terms of Service</button>
-    </div>
-
-    <div class="tabpane active" data-pane="overview">
-      <h4>What it does</h4>
-      <p>NoteBank lets you write, organize, and export Markdown notes across every major platform, with folders, tags, templates, and team sharing.</p>
-      <h4>Under the hood</h4>
-      <ul>
-        <li>Built with Flutter/Dart, targeting Android, iOS, Windows, and macOS (web planned later)</li>
-        <li>Firebase for Auth, Firestore, Storage, FCM, and Crashlytics; SQLite for local storage</li>
-        <li>Export to .md, .txt, .html, and .pdf; split-view editor and viewer</li>
-        <li>v1.0 is Firebase-first; a self-hosted backend option is a future goal, not part of this release</li>
-      </ul>
-    </div>
-
-    <div class="tabpane" data-pane="privacy">
-      <h4>Privacy Policy</h4>
-      <p>Last updated: draft. This describes what NoteBank collects and how it's used.</p>
-      <h4>Information collected</h4>
-      <ul>
-        <li>Account details (email) for sign-in via Firebase Authentication</li>
-        <li>Note content, tags, and folder structure, stored in Firestore and Storage to enable sync across your devices</li>
-        <li>Device push tokens, to deliver notifications through Firebase Cloud Messaging</li>
-        <li>Crash and performance diagnostics via Firebase Crashlytics</li>
-        <li>A local copy of your notes is also kept on-device in SQLite</li>
-      </ul>
-      <h4>How it's used</h4>
-      <p>Data is used to sync notes across your devices, support team sharing, and diagnose crashes. It is not sold or used for advertising.</p>
-      <h4>Team sharing</h4>
-      <p>Notes shared with a team are visible to the members you add. Removing a member revokes their access going forward.</p>
-      <h4>Your controls</h4>
-      <p>Exported notes leave the app in a plain file you control. You can delete notes, leave a team, or delete your account from Settings.</p>
-      <div class="legal-note">Template text — replace with a policy reviewed against your actual data practices and applicable law (including per-platform store requirements) before publishing.</div>
-    </div>
-
-    <div class="tabpane" data-pane="terms">
-      <h4>Terms of Service</h4>
-      <h4>Use of the app</h4>
-      <p>NoteBank is for personal and team note-taking. You retain ownership of everything you write; you're responsible for content shared with a team.</p>
-      <h4>Accounts and teams</h4>
-      <p>Team features rely on the account owner managing membership. Removing NoteBank from a device does not delete cloud-synced data — delete it from Settings instead.</p>
-      <h4>Paid features</h4>
-      <p>Cloud storage tiers beyond the free plan and a self-hosted backend are not part of v1.0 and aren't covered by these terms yet.</p>
-      <h4>Availability</h4>
-      <p>The app depends on Firebase; service interruptions on Google's end may affect sync.</p>
-      <h4>Changes</h4>
-      <p>These terms may change as NoteBank adds platforms and features; continued use after a change means you accept it.</p>
-      <div class="legal-note">Template text — have this reviewed before publishing, especially before adding paid tiers.</div>
-    </div>
-  </section>
-
-  <!-- PROJECT: KEMAKZI -->
-  <section id="project-kemakzi" class="project-page" data-app="Kemakzi">
-    <a class="back-link" href="#home">← All projects</a>
-    <div class="proj-head"><h2>Kemakzi</h2><span class="badge">Unity</span></div>
-    <p class="proj-tagline">An arcade-style FPV drone game with real physics-based flight — Acro, Angle, and Horizon modes, keyboard or touch.</p>
-    <p class="stack-line mono">Unity · C# · Rigidbody physics</p>
-
-    <div class="tabs">
-      <button class="tab active" data-tab="overview">Overview</button>
-      <button class="tab" data-tab="privacy">Privacy Policy</button>
-      <button class="tab" data-tab="terms">Terms of Service</button>
-    </div>
-
-    <div class="tabpane active" data-pane="overview">
-      <h4>What it does</h4>
-      <p>Kemakzi puts you in control of an FPV-style drone with genuine flight physics, rather than an arcade approximation of one.</p>
-      <h4>Under the hood</h4>
-      <ul>
-        <li>Physics-based flight using a Rigidbody, with per-motor thrust on a DJI F450 X-frame layout via AddForceAtPosition</li>
-        <li>Three flight modes — Acro, Angle, and Horizon</li>
-        <li>Dual input support: keyboard/mouse and touch joysticks</li>
-        <li>Smoothed camera follow and yaw orbit, plus a debug visualizer for thrust vectors and flight paths</li>
-      </ul>
-    </div>
-
-    <div class="tabpane" data-pane="privacy">
-      <h4>Privacy Policy</h4>
-      <p>Last updated: draft. This describes what Kemakzi collects and how it's used.</p>
-      <h4>Information collected</h4>
-      <ul>
-        <li>No account or sign-in is required to play</li>
-        <li>Local settings and progress (control scheme, flight mode) are stored on-device only</li>
-        <li>If an app store or analytics SDK is added later, this section will be updated to reflect it</li>
-      </ul>
-      <h4>How it's used</h4>
-      <p>Since no personal data is collected by the game itself, none is shared, sold, or used for advertising.</p>
-      <div class="legal-note">Template text — update this if you add analytics, ads, leaderboards, or cloud saves, since each of those adds data collection that needs disclosing.</div>
-    </div>
-
-    <div class="tabpane" data-pane="terms">
-      <h4>Terms of Service</h4>
-      <h4>Use of the app</h4>
-      <p>Kemakzi is provided for personal entertainment use. You may not redistribute or resell the game or its assets.</p>
-      <h4>No warranty</h4>
-      <p>The game is provided as-is; flight behavior and content may change between updates as it's iterated on.</p>
-      <h4>Changes</h4>
-      <p>These terms may be updated as the game develops; continued play after an update means you accept the revised terms.</p>
-      <div class="legal-note">Template text — have this reviewed before publishing to an app store.</div>
     </div>
   </section>
 
