@@ -38,9 +38,10 @@
       const card = document.createElement('div');
       card.className = 'screenshot';
       const img = document.createElement('img');
-      img.src = `assets/showcase/${i}.png`;
+      img.src = `assets/showcase/${i}.webp`;
       img.alt = `App screenshot ${i}`;
       img.draggable = false;
+      img.decoding = 'async';
       if(i > 3){ img.loading = 'lazy'; }
       img.addEventListener('load', ()=>{ card.classList.add('loaded'); });
       img.addEventListener('error', ()=>{ card.remove(); });
