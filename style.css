@@ -107,7 +107,7 @@ button.submit{padding:11px 22px; background:var(--accent); color:#0F1115; border
 }
 
 .showcase-wrapper{width:100%; overflow:hidden; margin-bottom:38px;}
-.showcase{display:flex; align-items:flex-start; gap:10px; padding-left:20px; padding-right:20px; width:100%; overflow-x:auto; overflow-y:hidden; scrollbar-width:none; -webkit-overflow-scrolling:touch; touch-action:pan-x; user-select:none; cursor:grab;}
+.showcase{display:flex; align-items:flex-start; gap:10px; padding-left:20px; padding-right:20px; width:100%; overflow-x:auto; overflow-y:hidden; scrollbar-width:none; -webkit-overflow-scrolling:touch; touch-action:pan-x pan-y; user-select:none; cursor:grab;}
 .showcase::-webkit-scrollbar{display:none;}
 .showcase.dragging{cursor:grabbing;}
 .screenshot{flex:0 0 auto; width:175px; position:relative; overflow:hidden; border-radius:8px; background:#202124; min-height:300px;}
