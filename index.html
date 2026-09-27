@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Portfolio of Hadi Awali — Android and game developer. Apps in Kotlin, games in Unity, backends in Node.js.">
-<title>Hadi Awali — Mobile & Game Developer</title>
+<meta name="description" content="Hadi Studio — independent Android apps and games by Hadi Awali. Privacy-first tools with clear privacy policies.">
+<title>Hadi Studio — Apps & Games</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 
 <header>
   <div class="wrap">
-    <div class="logo" onclick="location.hash='#home'">Hadi<span>.</span></div>
+    <div class="logo" onclick="nav('home')"><span class="logo-mark">H</span>Hadi <span>Studio</span></div>
     <nav id="nav">
       <a href="#home" data-r="home">Home</a>
       <a href="#about" data-r="about">About</a>
@@ -25,115 +25,99 @@
 
 <main class="wrap">
 
-  <!-- HOME -->
   <section id="home">
     <div class="hero">
       <div>
-        <h1>Building for the pocket and the palm — apps and games that hold up under real use.</h1>
-        <p>I'm Hadi, a developer working across Android and game development — from Kotlin-based apps and Firebase backends to physics-driven gameplay built in Unity.</p>
-        <a class="cta" href="#about">More about my work</a>
+        <h1>Apps and games built to respect your time — and your data.</h1>
+        <p>Hadi Studio is an independent shop building Android apps, cross-platform tools, and games — each one shipped with a clear privacy policy, not just a checkbox.</p>
+        <a class="cta" href="#about">About the studio</a>
       </div>
       <div class="stack-art" aria-hidden="true">
-        <div class="panel p1"></div>
-        <div class="panel p2"></div>
-        <div class="dot"></div>
+        <div class="panel p1"></div><div class="panel p2"></div><div class="dot"></div>
       </div>
     </div>
 
-    <h2 class="section-title">Projects</h2>
-    <p class="section-sub">One thing I've shipped so far — tap it to see how it works, and its privacy policy and terms.</p>
-
+    <h2 class="section-title">Our Apps</h2>
+    <p class="section-sub">Our first app — tap it for features, an overview, and its full privacy policy and terms.</p>
     <div class="cards">
-      <button class="card" onclick="location.hash='#project-codesnap'">
+      <a class="card" href="#app-codesnap">
         <span class="card-cover"><span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><circle cx="6.5" cy="6.5" r=".7" fill="currentColor" stroke="none"></circle><circle cx="17.5" cy="6.5" r=".7" fill="currentColor" stroke="none"></circle><circle cx="6.5" cy="17.5" r=".7" fill="currentColor" stroke="none"></circle><path d="M14 14h3M20 14v3M14 20h3M20 20h.01M17 17h.01"></path></svg></span></span>
-        <span class="card-body">
-          <h3>CodeSnap</h3>
-          <p>Privacy-first QR code &amp; barcode scanner and generator for Android</p>
-          <span class="tag">Kotlin · Android</span>
-        </span>
-      </button>
+        <span class="card-body"><h3>CodeSnap</h3><p>Privacy-first QR code &amp; barcode scanner and generator for Android</p><span class="tag">Kotlin · Android</span></span>
+      </a>
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section id="about">
-    <h2 class="section-title">About</h2>
-    <p class="section-sub">I build independently and on a project basis, moving between mobile apps and games rather than staying in one lane.</p>
+    <h2 class="section-title">About the studio</h2>
+    <p class="section-sub">Hadi Studio builds independently and on a project basis, moving between mobile apps and games rather than staying in one lane.</p>
     <div class="about-grid">
-      <div class="skill-block">
-        <h3>Mobile</h3>
-        <ul>
-          <li>Native Android apps in Kotlin with XML layouts</li>
-          <li>Cross-platform apps in Flutter/Dart</li>
-          <li>Firebase — Auth, Firestore, Storage, FCM, Crashlytics</li>
-          <li>Local persistence with SQLite</li>
-        </ul>
-      </div>
-      <div class="skill-block">
-        <h3>Games</h3>
-        <ul>
-          <li>Unity gameplay systems in C#</li>
-          <li>Rigidbody-based physics and per-part force simulation</li>
-          <li>Keyboard and touch input, joystick controls</li>
-          <li>Camera systems and debug tooling</li>
-        </ul>
-      </div>
-      <div class="skill-block">
-        <h3>Backend & tooling</h3>
-        <ul>
-          <li>REST APIs and backend services for app features</li>
-          <li>Data modelling — Firestore schema design</li>
-          <li>Bots and control panels (Node.js, Express)</li>
-        </ul>
-      </div>
-      <div class="skill-block">
-        <h3>How I work</h3>
-        <ul>
-          <li>Project-based rather than tied to one team</li>
-          <li>Start from a written PRD before building</li>
-          <li>Ship Android-first when budget or scope is tight, cross-platform when it isn't</li>
-        </ul>
-      </div>
+      <div class="skill-block"><h3>Mobile</h3><ul>
+        <li>Native Android apps in Kotlin with XML layouts</li>
+        <li>Cross-platform apps in Flutter/Dart</li>
+        <li>Firebase — Auth, Firestore, Storage, FCM, Crashlytics</li>
+        <li>Local persistence with SQLite</li>
+      </ul></div>
+      <div class="skill-block"><h3>Games</h3><ul>
+        <li>Unity gameplay systems in C#</li>
+        <li>Rigidbody-based physics and per-part force simulation</li>
+        <li>Keyboard and touch input, joystick controls</li>
+        <li>Camera systems and debug tooling</li>
+      </ul></div>
+      <div class="skill-block"><h3>Backend & tooling</h3><ul>
+        <li>REST APIs and backend services for app features</li>
+        <li>Data modelling — Firestore schema design</li>
+        <li>Bots and control panels (Node.js, Express)</li>
+      </ul></div>
+      <div class="skill-block"><h3>How we work</h3><ul>
+        <li>Project-based rather than tied to one team</li>
+        <li>Start from a written PRD before building</li>
+        <li>Ship Android-first when budget or scope is tight, cross-platform when it isn't</li>
+      </ul></div>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <h2 class="section-title">Contact</h2>
-    <p class="section-sub">Working on something and want a hand — or want to talk about one of the projects below? Send a message.</p>
+    <p class="section-sub">Found a bug in one of our apps, have a project idea, or want to talk partnership? Send us a message.</p>
     <form id="contactForm">
-      <div>
-        <label for="cName">Name</label>
-        <input id="cName" required>
-      </div>
-      <div>
-        <label for="cEmail">Email</label>
-        <input id="cEmail" type="email" required>
-      </div>
-      <div>
-        <label for="cMsg">Message</label>
-        <textarea id="cMsg" required></textarea>
-      </div>
+      <div><label for="cName">Name</label><input id="cName" required></div>
+      <div><label for="cEmail">Email</label><input id="cEmail" type="email" required></div>
+      <div><label for="cMsg">Message</label><textarea id="cMsg" required></textarea></div>
       <button class="submit" type="submit">Send message</button>
     </form>
     <p class="contact-direct">Or reach out directly at <span class="mono">developer.hadiawali@gmail.com</span>.</p>
   </section>
 
-  <!-- PROJECT: CODESNAP -->
-  <section id="project-codesnap" class="project-page" data-app="CodeSnap">
-    <a class="back-link" href="#home">← All projects</a>
-    <div class="proj-head"><h2>CodeSnap</h2><span class="badge">Kotlin · Android</span></div>
-    <p class="proj-tagline">A privacy-first QR code and barcode scanner and generator for Android — everything runs on your device.</p>
-    <p class="stack-line mono">Kotlin · XML · CameraX · Firebase</p>
-
-    <div class="tabs">
-      <button class="tab active" data-tab="overview">Overview</button>
-      <button class="tab" data-tab="privacy">Privacy Policy</button>
-      <button class="tab" data-tab="terms">Terms of Service</button>
+  <!-- CODESNAP -->
+  <section id="app-codesnap">
+    <div class="app-banner">
+      <div class="app-icon-lg"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><circle cx="6.5" cy="6.5" r=".7" fill="currentColor" stroke="none"></circle><circle cx="17.5" cy="6.5" r=".7" fill="currentColor" stroke="none"></circle><circle cx="6.5" cy="17.5" r=".7" fill="currentColor" stroke="none"></circle><path d="M14 14h3M20 14v3M14 20h3M20 20h.01M17 17h.01"></path></svg></div>
+      <span class="badge">Android</span>
+      <h2>CodeSnap</h2>
+      <p class="proj-tagline">A privacy-first QR code and barcode scanner and generator for Android — everything runs on your device.</p>
+      <div class="store-row">
+        <span class="store-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 9-14 9V3Z"></path></svg>
+          <span class="sb-text"><span class="sb-small">Launching on</span><span class="sb-big">Google Play</span></span>
+        </span>
+      </div>
     </div>
 
-    <div class="tabpane active" data-pane="overview">
-      <h4>What it does</h4>
+    <div class="screenshot-row">
+      <div class="phone-frame"><div class="pf-bar"><span class="pf-dot"></span><span class="pf-l"></span></div><div class="pf-body"><div class="pf-card h2"></div><div class="pf-line w70"></div><div class="pf-line w40"></div><div class="pf-card h3"></div><div class="pf-card h3"></div></div></div>
+      <div class="phone-frame"><div class="pf-bar"><span class="pf-dot"></span><span class="pf-l"></span></div><div class="pf-body"><div class="pf-line w55"></div><div class="pf-card h1"></div><div class="pf-line w40"></div></div></div>
+      <div class="phone-frame"><div class="pf-bar"><span class="pf-dot"></span><span class="pf-l"></span></div><div class="pf-body"><div class="pf-card h3"></div><div class="pf-card h3"></div><div class="pf-card h3"></div><div class="pf-line w70"></div></div></div>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="3"></rect><path d="M8.5 7 10 4h4l1.5 3"></path><circle cx="12" cy="13.5" r="3.5"></circle></svg><h4>Scan anywhere</h4><p>Camera or gallery: scan live with the camera, or decode a code from an image you already have.</p></div>
+      <div class="feature-card"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><path d="M14 14h3M20 14v3M14 20h3M20 20v3"></path></svg><h4>Make codes too</h4><p>Generate QR codes for text, URLs, Wi-Fi networks (including open networks), and contacts.</p></div>
+      <div class="feature-card"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"></rect><path d="M9.5 12l2 2 3.5-4"></path></svg><h4>On device</h4><p>Everything is decoded locally. No account, no upload, works offline.</p></div>
+      <div class="feature-card"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.6 10.7 15.4 6.6M8.6 13.3l6.8 4.1"></path></svg><h4>Share &amp; revisit</h4><p>Share results, save generated codes to your gallery, and revisit everything in on-device history.</p></div>
+    </div>
+
+    <h3 class="section-h">Overview</h3>
+    <div class="page-section">
       <p>CodeSnap scans QR codes and barcodes live with the camera or from a gallery image, and generates codes for text, URLs, Wi-Fi networks (including open networks), and contacts — results can be shared, saved to the gallery, and revisited in an on-device scan history. No account required.</p>
       <h4>Under the hood</h4>
       <ul>
@@ -144,8 +128,33 @@
       </ul>
     </div>
 
-    <div class="tabpane" data-pane="privacy">
-      <p><strong>Effective date:</strong> 26 September 2026</p>
+    <h3 class="section-h">Legal</h3>
+    <div class="page-section">
+      <p>Read the full policies for CodeSnap.</p>
+      <div class="legal-row">
+        <a class="legal-btn" href="#app-codesnap-privacy"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>Privacy Policy</a>
+        <a class="legal-btn" href="#app-codesnap-terms"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h8l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"></path><path d="M9 12h6M9 16h6M9 8h2"></path></svg>Terms of Service</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="app-codesnap-privacy">
+    <h3 class="section-h">Privacy Policy — CodeSnap</h3>
+    <div class="page-section">
+      <div class="policy-meta"><span class="badge">Effective 26 September 2026</span></div>
+      <h4>At a glance</h4>
+      <div class="policy-quick">
+        <div class="quick-card no"><h5><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>Not collected</h5><ul>
+          <li>No account or sign-up</li>
+          <li>No personal data collected by the app</li>
+          <li>No sale of data</li>
+          <li>Scan history stays on your device</li>
+        </ul></div>
+        <div class="quick-card yes"><h5><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Processed by third parties</h5><ul>
+          <li>Advertising ID and ad interaction data (Google AdMob)</li>
+          <li>Anonymous crash diagnostics (Firebase Crashlytics)</li>
+        </ul></div>
+      </div>
       <h4>1. What we don't collect</h4>
       <p>CodeSnap is a scanner and generator app. To be clear about what it does <em>not</em> do:</p>
       <ul>
@@ -179,9 +188,11 @@
       <h4>8. Changes to this policy</h4>
       <p>This policy may be updated as the app changes. The current version always lives on this page; the effective date above tells you when this version started applying.</p>
     </div>
+  </section>
 
-    <div class="tabpane" data-pane="terms">
-      <h4>Terms of Service</h4>
+  <section id="app-codesnap-terms">
+    <h3 class="section-h">Terms of Service — CodeSnap</h3>
+    <div class="page-section">
       <h4>Use of the app</h4>
       <p>CodeSnap is for personal use. You're responsible for what you do with the content you scan or generate.</p>
       <h4>No warranty</h4>
@@ -193,33 +204,22 @@
 
 </main>
 
-<footer id="footer">
+<footer>
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-col">
         <h4>Site</h4>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul>
       </div>
       <div class="footer-col">
         <h4>Social</h4>
         <div class="social-row">
-          <a href="https://github.com/HadiAwali" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.7 2.8 5.6 3.1 5.6 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.2 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"></path></svg>
-          </a>
-          <a href="mailto:developer.hadiawali@gmail.com" aria-label="Email" title="Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
-          </a>
+          <a href="https://github.com/HadiAwali" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.7 2.8 5.6 3.1 5.6 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.2 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"></path></svg></a>
+          <a href="mailto:developer.hadiawali@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg></a>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Hadi Awali. All rights reserved.</span>
-      <a class="to-top" href="#home">Back to top ↑</a>
-    </div>
+    <div class="footer-bottom">© 2026 Hadi Studio. All rights reserved.</div>
   </div>
 </footer>
 
