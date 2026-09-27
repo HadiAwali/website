@@ -23,7 +23,7 @@ nav a{font-size:.95rem; color:var(--text-dim); text-decoration:none; transition:
 nav a:hover, nav a.active{color:var(--text);}
 
 main{padding:64px 0 90px;}
-section{display:none;}
+section{display:none; scroll-margin-top:81px;}
 section.active{display:block; animation:fade .3s ease;}
 @keyframes fade{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:none;}}
 
@@ -50,8 +50,8 @@ h2.section-title{font-size:1.7rem; margin:0 0 8px; font-weight:600;}
 .card-cover{aspect-ratio:1/1; display:flex; align-items:center; justify-content:center; background:linear-gradient(150deg, var(--surface-2), var(--bg));}
 .card:nth-child(1) .card-cover, .card:nth-child(3) .card-cover{background:linear-gradient(150deg, #2A2140, #0F1115);}
 .card:nth-child(2) .card-cover{background:linear-gradient(150deg, #3A2F17, #0F1115);}
-.card-icon{width:70%; aspect-ratio:1/1; border-radius:22%; background:var(--surface); display:flex; align-items:center; justify-content:center; box-shadow:0 18px 40px -12px #000;}
-.card-icon svg{width:50%; height:50%; stroke:var(--accent);}
+.card-icon{width:70%; aspect-ratio:1/1; border-radius:22%; background:transparent; display:flex; align-items:center; justify-content:center; box-shadow:0 18px 40px -12px #000;}
+.card-icon svg{width:100%; height:100%; stroke:var(--accent);}
 .card:nth-child(2) .card-icon svg{stroke:var(--amber);}
 .card-body{padding:16px 18px 18px; display:flex; flex-direction:column; gap:6px;}
 .card-body h3{margin:0; font-size:1.05rem; font-weight:600;}
