@@ -30,3 +30,42 @@
       window.location.href = 'mailto:developer.hadiawali@gmail.com?subject=Portfolio%20contact&body=' + body;
     });
   }
+
+  const showcase = document.getElementById('showcase');
+  if(showcase){
+    const screenshotCount = 5;
+    for(let i = 1; i <= screenshotCount; i++){
+      const card = document.createElement('div');
+      card.className = 'screenshot';
+      const img = document.createElement('img');
+      img.src = `assets/showcase/${i}.png`;
+      img.alt = `App screenshot ${i}`;
+      img.draggable = false;
+      if(i > 3){ img.loading = 'lazy'; }
+      img.addEventListener('load', ()=>{ card.classList.add('loaded'); });
+      img.addEventListener('error', ()=>{ card.remove(); });
+      card.appendChild(img);
+      showcase.appendChild(card);
+    }
+
+    let touchStartX = 0;
+    let touchStartScroll = 0;
+    showcase.addEventListener('touchstart', e=>{ touchStartX = e.touches[0].clientX; touchStartScroll = showcase.scrollLeft; }, {passive:true});
+    showcase.addEventListener('touchmove', e=>{ showcase.scrollLeft = touchStartScroll - (e.touches[0].clientX - touchStartX); }, {passive:true});
+
+    let dragging = false;
+    let mouseStartX = 0;
+    let mouseStartScroll = 0;
+    showcase.addEventListener('mousedown', e=>{ dragging = true; showcase.classList.add('dragging'); mouseStartX = e.pageX; mouseStartScroll = showcase.scrollLeft; });
+    window.addEventListener('mouseup', ()=>{ dragging = false; showcase.classList.remove('dragging'); });
+    showcase.addEventListener('mousemove', e=>{ if(!dragging) return; e.preventDefault(); showcase.scrollLeft = mouseStartScroll - (e.pageX - mouseStartX); });
+
+    showcase.addEventListener('wheel', e=>{
+      if(Math.abs(e.deltaY) > Math.abs(e.deltaX)){
+        e.preventDefault();
+        showcase.scrollLeft += e.deltaY;
+      }
+    }, {passive:false});
+
+    document.addEventListener('dragstart', e=>{ if(e.target.tagName === 'IMG') e.preventDefault(); });
+  }
