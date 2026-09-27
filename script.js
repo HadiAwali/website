@@ -1,4 +1,4 @@
-  const routes = ['home','about','contact','app-codesnap','app-codesnap-privacy','app-codesnap-terms','privacy'];
+  const routes = ['home','about','contact','app-codesnap','app-codesnap-privacy','app-codesnap-terms','app-codesnap-whats-new','privacy'];
 
   function nav(id){ location.hash = '#' + id; }
 
