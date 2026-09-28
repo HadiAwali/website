@@ -110,6 +110,9 @@ button.submit{padding:11px 22px; background:var(--accent); color:#0F1115; border
 .showcase{display:flex; align-items:flex-start; gap:10px; padding-left:20px; padding-right:20px; width:100%; overflow-x:auto; overflow-y:hidden; scrollbar-width:none; -webkit-overflow-scrolling:touch; touch-action:pan-x pan-y; user-select:none; cursor:grab;}
 .showcase::-webkit-scrollbar{display:none;}
 .showcase.dragging{cursor:grabbing;}
+@media (max-width:700px){
+  .showcase{overflow-x:hidden; touch-action:pan-y;}
+}
 .screenshot{flex:0 0 auto; width:175px; position:relative; overflow:hidden; border-radius:8px; background:#202124; min-height:300px;}
 .screenshot img{width:100%; height:auto; display:block; opacity:0; transition:opacity .25s ease; pointer-events:none; user-select:none; -webkit-user-drag:none;}
 .screenshot::before{content:""; position:absolute; inset:0; background:linear-gradient(110deg, #181818 25%, #292929 45%, #181818 65%); background-size:250% 100%; animation:shimmer 1.2s infinite; z-index:0;}
