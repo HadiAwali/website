@@ -73,7 +73,7 @@ button.submit{padding:11px 22px; background:var(--accent); color:#0F1115; border
 .contact-direct a.mail-link{color:inherit; text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(140,111,255,.6);}
 .contact-direct a.mail-link:hover{color:#8C6FFF; text-decoration-color:#8C6FFF;}
 
-.app-banner{text-align:left; padding:44px 40px; border-radius:20px; margin-bottom:36px; background:linear-gradient(160deg, #241C3A, var(--bg)); border:1px solid var(--border);}
+.app-banner{padding:44px 0; border-radius:20px; margin-bottom:36px; background:none; text-align:left;}
 .app-banner.amber{background:linear-gradient(160deg, #332811, var(--bg));}
 .banner-main{display:flex; align-items:center; justify-content:space-between; gap:40px;}
 .banner-info{flex:1 1 auto; min-width:0;}
@@ -98,7 +98,7 @@ button.submit{padding:11px 22px; background:var(--accent); color:#0F1115; border
 .badge{font-size:.72rem; padding:3px 10px; border-radius:20px; background:var(--surface-2); color:var(--text-dim); display:inline-block; margin-bottom:14px;}
 
 @media (max-width:700px){
-  .app-banner{padding:30px 20px 28px;}
+  .app-banner{padding:30px 0 28px;}
   .banner-main{gap:16px;}
   .banner-icon{width:92px; height:92px;}
   .banner-title{font-size:1.6rem;}
