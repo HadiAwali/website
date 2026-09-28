@@ -33,21 +33,39 @@
 
   const showcase = document.getElementById('showcase');
   if(showcase){
+    const wrap = showcase.parentElement;
+    const prev = wrap.querySelector('.sc-prev');
+    const next = wrap.querySelector('.sc-next');
+    if(prev && next){
+      const upd = ()=>{
+        prev.hidden = showcase.scrollLeft <= 4;
+        next.hidden = showcase.scrollLeft + showcase.clientWidth >= showcase.scrollWidth - 4;
+      };
+      const step = ()=> Math.round(showcase.clientWidth * 0.8);
+      next.addEventListener('click', ()=> showcase.scrollBy({left: step(), behavior:'smooth'}));
+      prev.addEventListener('click', ()=> showcase.scrollBy({left: -step(), behavior:'smooth'}));
+      showcase.addEventListener('scroll', upd, {passive:true});
+      window.addEventListener('resize', upd, {passive:true});
+      upd();
+    }
+
     const screenshotCount = 5;
     for(let i = 1; i <= screenshotCount; i++){
       const card = document.createElement('div');
       card.className = 'screenshot';
       const img = document.createElement('img');
-      img.src = `assets/showcase/${i}.webp`;
       img.alt = `App screenshot ${i}`;
+      img.width = 350;
+      img.height = 759;
       img.draggable = false;
       img.decoding = 'async';
-      if(i > 3){ img.loading = 'lazy'; }
-      img.addEventListener('load', ()=>{ card.classList.add('loaded'); });
-      img.addEventListener('error', ()=>{ card.remove(); });
+      img.addEventListener('load', ()=>{ card.classList.add('loaded'); showcase.dispatchEvent(new Event('scroll')); });
+      img.addEventListener('error', ()=>{ card.remove(); showcase.dispatchEvent(new Event('scroll')); });
+      img.src = `assets/showcase/${i}.webp`;
       card.appendChild(img);
       showcase.appendChild(card);
     }
+    showcase.dispatchEvent(new Event('scroll'));
 
     document.addEventListener('dragstart', e=>{ if(e.target.tagName === 'IMG') e.preventDefault(); });
   }
