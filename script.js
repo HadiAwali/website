@@ -49,19 +49,5 @@
       showcase.appendChild(card);
     }
 
-    let dragging = false;
-    let mouseStartX = 0;
-    let mouseStartScroll = 0;
-    showcase.addEventListener('mousedown', e=>{ dragging = true; showcase.classList.add('dragging'); mouseStartX = e.pageX; mouseStartScroll = showcase.scrollLeft; });
-    window.addEventListener('mouseup', ()=>{ dragging = false; showcase.classList.remove('dragging'); });
-    showcase.addEventListener('mousemove', e=>{ if(!dragging) return; e.preventDefault(); showcase.scrollLeft = mouseStartScroll - (e.pageX - mouseStartX); });
-
-    showcase.addEventListener('wheel', e=>{
-      if(Math.abs(e.deltaY) > Math.abs(e.deltaX)){
-        e.preventDefault();
-        showcase.scrollLeft += e.deltaY;
-      }
-    }, {passive:false});
-
     document.addEventListener('dragstart', e=>{ if(e.target.tagName === 'IMG') e.preventDefault(); });
   }
