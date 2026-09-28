@@ -58,7 +58,7 @@ h2.section-title{font-size:1.7rem; margin:0 0 8px; font-weight:600;}
 .card-body p{margin:0; color:var(--text-dim); font-size:.88rem;}
 .card-body .tag{align-self:flex-start; margin-top:6px; font-size:.7rem; color:var(--text-dim); background:var(--surface-2); padding:3px 9px; border-radius:20px;}
 
-.about-grid{display:grid; grid-template-columns:1fr 1fr; gap:36px;}
+.about-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:36px;}
 .skill-block h3{font-size:1rem; color:var(--accent); margin:0 0 10px;}
 .skill-block ul{margin:0; padding-left:18px; color:var(--text-dim); font-size:.95rem;}
 .skill-block li{margin-bottom:6px;}
@@ -70,6 +70,8 @@ input:focus,textarea:focus{outline:2px solid var(--accent); outline-offset:1px;}
 textarea{resize:vertical; min-height:110px;}
 button.submit{padding:11px 22px; background:var(--accent); color:#0F1115; border:none; border-radius:6px; font-weight:600; font-size:.95rem; cursor:pointer;}
 .contact-direct{color:var(--text-dim); margin-top:26px; font-size:.9rem;}
+.contact-direct a.mail-link{color:inherit; text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(140,111,255,.6);}
+.contact-direct a.mail-link:hover{color:#8C6FFF; text-decoration-color:#8C6FFF;}
 
 .app-banner{text-align:left; padding:44px 40px; border-radius:20px; margin-bottom:36px; background:linear-gradient(160deg, #241C3A, var(--bg)); border:1px solid var(--border);}
 .app-banner.amber{background:linear-gradient(160deg, #332811, var(--bg));}
@@ -150,7 +152,7 @@ button.submit{padding:11px 22px; background:var(--accent); color:#0F1115; border
 
 footer{border-top:1px solid var(--border); background:var(--surface); padding:46px 0 30px; color:var(--text-dim); font-size:.88rem; margin-top:20px;}
 .footer-top{display:flex; align-items:flex-start; justify-content:space-between; gap:36px 40px; padding-bottom:34px;}
-.footer-cols{flex:1 1 auto; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:44px 56px;}
+.footer-cols{flex:1 1 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(170px,1fr)); gap:44px 56px;}
 .footer-col{display:block;}
 .footer-col h4{color:var(--text); font-size:.72rem; text-transform:uppercase; letter-spacing:.11em; font-weight:700; margin:0 0 16px;}
 .footer-col ul{list-style:none; margin:0; padding:0; display:grid; gap:11px;}
