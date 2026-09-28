@@ -11,7 +11,7 @@ body{margin:0; background:var(--bg); color:var(--text); font-family:'Inter',syst
 h1,h2,h3,.logo,nav a,button,.tab{font-family:'Space Grotesk',sans-serif;}
 .mono{font-family:'JetBrains Mono',monospace;}
 a{color:inherit;}
-.wrap{max-width:920px; margin:0 auto; padding:0 24px;}
+.wrap{max-width:1200px; margin:0 auto; padding:0 24px;}
 
 header{position:sticky; top:0; z-index:10; padding-top:calc(18px + env(safe-area-inset-top,0px)); padding-bottom:18px; background:rgba(15,17,21,.86); backdrop-filter:blur(10px); border-bottom:1px solid var(--border);}
 header .wrap{display:flex; align-items:center; justify-content:space-between;}
