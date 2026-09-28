@@ -119,6 +119,8 @@ button.submit{padding:11px 22px; background:var(--accent); color:#0F1115; border
 .screenshot.loaded{background:transparent;}
 .screenshot.loaded::before{display:none;}
 .screenshot.loaded img{opacity:1;}
+@media (min-width:900px){ .screenshot{width:230px;} }
+@media (min-width:1400px){ .screenshot{width:260px;} }
 
 .feature-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:14px; margin-bottom:40px;}
 .feature-card{background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:20px;}
