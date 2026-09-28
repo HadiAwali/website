@@ -1,0 +1,6 @@
+# agent verification screenshots - never commit
+_*.png
+shot*.png
+warm.png
+verify*.png
+*.tmp.png
