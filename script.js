@@ -27,7 +27,7 @@
       const email = document.getElementById('cEmail').value;
       const msg = document.getElementById('cMsg').value;
       const body = encodeURIComponent(msg + '\n\n— ' + name + ' (' + email + ')');
-      window.location.href = 'mailto:developer.hadiawali@gmail.com?subject=Portfolio%20contact&body=' + body;
+      window.open('https://mail.google.com/mail/?view=cm&fs=1&to=developer.hadiawali@gmail.com&su=Portfolio%20contact&body=' + body, '_blank');
     });
   }
 
