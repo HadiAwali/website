@@ -40,7 +40,7 @@ section.active{display:block; animation:fade .3s ease;}
 .hero .cta{display:inline-block; padding:11px 20px; background:var(--accent); color:#121212; font-weight:600; border-radius:6px; text-decoration:none; font-size:.95rem;}
 .stage{height:240px; border-radius:12px; position:relative; overflow:hidden; background:radial-gradient(49% 49% at 50% 50%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 100%);}
 .term{padding:16px;}
-.term .win{background:#1A1A1A; border:1px solid var(--border); border-radius:10px; overflow:hidden; box-shadow:0 24px 48px -24px #000, 0 0 20px color-mix(in srgb, var(--accent) 20%, transparent), 0 0 0 1px color-mix(in srgb, var(--accent) 12%, transparent);}
+.term .win{background:var(--surface); border:1px solid var(--border); border-radius:10px; overflow:hidden; box-shadow:0 24px 48px -24px #000, 0 0 20px color-mix(in srgb, var(--accent) 20%, transparent), 0 0 0 1px color-mix(in srgb, var(--accent) 12%, transparent);}
 .term .bar{background:var(--surface-2); padding:8px 12px; font-family:'JetBrains Mono',monospace; font-size:.68rem; color:var(--text-dim);}
 .term .body{padding:14px; font-family:'JetBrains Mono',monospace; font-size:.74rem; line-height:1.9; color:var(--text-dim);}
 .term .prompt{color:var(--accent);}
