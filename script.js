@@ -4,7 +4,8 @@
 
   function render(){
     let hash = location.hash.replace('#','') || 'home';
-    if(hash === 'app-codesnap-whats-new') hash = 'app-codesnap';
+    const wantWhatsNew = hash === 'app-codesnap-whats-new';
+    if(wantWhatsNew) hash = 'app-codesnap';
     if(!routes.includes(hash)) hash = 'home';
     const activeId = hash === 'privacy' ? 'app-codesnap-privacy' : hash;
     routes.forEach(r=>{
@@ -15,7 +16,29 @@
     document.querySelectorAll('#nav a').forEach(a=>{
       a.classList.toggle('active', a.dataset.r === topLevel);
     });
+    if(wantWhatsNew){
+      scrollToWhatsNew();
+      return;
+    }
     window.scrollTo(0,0);
+  }
+
+  function scrollToWhatsNew(){
+    const target = document.getElementById('whats-new');
+    if(!target) { window.scrollTo(0,0); return; }
+    const smooth = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+    const go = ()=> target.scrollIntoView({behavior:smooth, block:'start'});
+    requestAnimationFrame(go);
+    // showcase cards resize when their images finish loading, so settle again
+    const imgs = [...document.querySelectorAll('#showcase img')];
+    let pending = imgs.filter(i=>!i.complete).length;
+    if(!pending) return;
+    imgs.forEach(i=>{
+      if(i.complete) return;
+      const once = ()=>{ pending--; if(pending <= 0) go(); };
+      i.addEventListener('load', once, {once:true});
+      i.addEventListener('error', once, {once:true});
+    });
   }
   window.addEventListener('hashchange', render);
   render();

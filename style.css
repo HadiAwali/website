@@ -179,6 +179,7 @@ button.submit{padding:11px 22px; background:var(--accent); color:#121212; border
 }
 
 .section-h{font-size:1.15rem; font-weight:600; margin:38px 0 16px; padding-top:26px; border-top:1px solid var(--border); color:var(--text);}
+#whats-new{scroll-margin-top:81px;}
 .section-h:first-of-type{margin-top:0; padding-top:0; border-top:none;}
 .page-section h4{font-size:1.05rem; margin:28px 0 10px; padding-top:22px; border-top:1px solid var(--border); color:var(--text);}
 .page-section h4:first-of-type{margin-top:0; padding-top:0; border-top:none;}
