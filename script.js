@@ -1,9 +1,10 @@
-  const routes = ['home','about','contact','app-codesnap','app-codesnap-privacy','app-codesnap-terms','app-codesnap-whats-new','privacy'];
+  const routes = ['home','about','contact','app-codesnap','app-codesnap-privacy','app-codesnap-terms','privacy'];
 
   function nav(id){ location.hash = '#' + id; }
 
   function render(){
     let hash = location.hash.replace('#','') || 'home';
+    if(hash === 'app-codesnap-whats-new') hash = 'app-codesnap';
     if(!routes.includes(hash)) hash = 'home';
     const activeId = hash === 'privacy' ? 'app-codesnap-privacy' : hash;
     routes.forEach(r=>{
@@ -68,4 +69,76 @@
     showcase.dispatchEvent(new Event('scroll'));
 
     document.addEventListener('dragstart', e=>{ if(e.target.tagName === 'IMG') e.preventDefault(); });
+
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const lbCount = document.getElementById('lbCount');
+    const lbClose = document.getElementById('lbClose');
+    const lbPrev = document.getElementById('lbPrev');
+    const lbNext = document.getElementById('lbNext');
+    if(lightbox && lbImg){
+      const imgs = ()=> [...showcase.querySelectorAll('.screenshot img')];
+      let idx = 0;
+      let lastFocus = null;
+      const show = ()=>{
+        const list = imgs();
+        if(!list.length){ close(); return; }
+        idx = (idx + list.length) % list.length;
+        lbImg.src = list[idx].src;
+        lbImg.alt = list[idx].alt;
+        lbCount.textContent = (idx + 1) + ' / ' + list.length;
+        lbPrev.hidden = lbNext.hidden = list.length < 2;
+      };
+      function close(){
+        lightbox.hidden = true;
+        document.body.style.overflow = '';
+        if(lastFocus){ lastFocus.focus(); lastFocus = null; }
+      }
+      const open = (i)=>{
+        idx = i;
+        lastFocus = document.activeElement;
+        lightbox.hidden = false;
+        document.body.style.overflow = 'hidden';
+        show();
+        lbClose.focus();
+      };
+      showcase.addEventListener('click', e=>{
+        const card = e.target.closest('.screenshot');
+        if(!card) return;
+        const cards = [...showcase.querySelectorAll('.screenshot')];
+        open(cards.indexOf(card));
+      });
+      lbClose.addEventListener('click', close);
+      lbPrev.addEventListener('click', ()=>{ idx--; show(); });
+      lbNext.addEventListener('click', ()=>{ idx++; show(); });
+      lightbox.addEventListener('click', e=>{ if(e.target === lightbox) close(); });
+      document.addEventListener('keydown', e=>{
+        if(lightbox.hidden) return;
+        if(e.key === 'Escape') close();
+        else if(e.key === 'ArrowLeft'){ idx--; show(); }
+        else if(e.key === 'ArrowRight'){ idx++; show(); }
+      });
+    }
+  }
+
+  const aboutDesc = document.getElementById('aboutDesc');
+  const readMore = document.getElementById('readMore');
+  if(aboutDesc && readMore){
+    const fit = ()=>{
+      if(!aboutDesc.offsetHeight) return;
+      if(aboutDesc.classList.contains('collapsed')){
+        readMore.hidden = aboutDesc.scrollHeight <= aboutDesc.clientHeight + 4;
+      }else{
+        readMore.hidden = false;
+      }
+    };
+    readMore.addEventListener('click', ()=>{
+      const collapsed = aboutDesc.classList.toggle('collapsed');
+      readMore.textContent = collapsed ? 'Read more' : 'Show less';
+      readMore.setAttribute('aria-expanded', String(!collapsed));
+      fit();
+    });
+    window.addEventListener('resize', fit, {passive:true});
+    window.addEventListener('hashchange', ()=> setTimeout(fit, 0));
+    fit();
   }

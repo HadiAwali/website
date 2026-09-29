@@ -152,13 +152,16 @@
 
         <h3 class="section-h">What's new</h3>
         <div class="page-section">
-          <h4>Version 1.0</h4>
           <ul>
-            <li>Scan any QR code or barcode instantly with your camera</li>
-            <li>Create QR codes for text, URLs, Wi-Fi, contacts, email, phone, SMS, and locations</li>
-            <li>12 barcode formats built in: EAN-8, EAN-13, UPC-A, UPC-E, Code 39, Code 93, Code 128, ITF, PDF417, Codabar, Data Matrix, and Aztec</li>
+            <li>QR Code Scanner: Scan any QR code or barcode instantly with your camera</li>
+            <li>QR Code Generator: Create QR codes for text, URLs, Wi-Fi, contacts, email, phone, SMS, and locations</li>
+            <li>Barcode Generator: Create EAN-8, EAN-13, UPC-A, UPC-E, Code 39, Code 93, Code 128, ITF, PDF417, Codabar, Data Matrix, and Aztec barcodes</li>
+            <li>Save to Gallery: Save scanned QR codes directly to your device gallery</li>
+            <li>Dark &amp; Light Theme: Automatically follows your system theme</li>
+            <li>11 Languages: English, Arabic, German, Spanish, French, Hindi, Italian, Japanese, Korean, Portuguese, and Chinese</li>
+            <li>Premium: Full QR &amp; appearance customization, unlimited history, HD export, and ad-free experience</li>
+            <li>Crash Reporting: Firebase Crashlytics for automatic crash detection</li>
           </ul>
-          <p><a class="text-link" href="#app-codesnap-whats-new">See all release notes</a></p>
         </div>
 
         <h3 class="section-h">Legal</h3>
@@ -172,7 +175,13 @@
 
     <h3 class="section-h">About this app</h3>
     <div class="page-section">
-      <p>CodeSnap scans QR codes and barcodes live with the camera or from a gallery image, and makes codes for text, URLs, Wi-Fi networks (including open networks), and contacts. Share the results, save them to your gallery, or find them again in your on-device scan history. No account required.</p>
+      <div class="about-desc collapsed" id="aboutDesc">
+        <p>CodeSnap is a QR code and barcode scanner and generator that works entirely on your phone. Point the camera at any code and it reads it right away, or pick a photo from your gallery when the code sits inside an image.</p>
+        <p>The scanner covers the formats you run into every day: QR codes plus EAN-8, EAN-13, UPC-A, UPC-E, Code 39, Code 93, Code 128, ITF, PDF417, Codabar, Data Matrix, and Aztec. There is a flashlight for dark places, and every scan lands in your history so you can open it again later.</p>
+        <p>The generator handles text, URLs, Wi-Fi networks (open networks included), contacts, email, phone numbers, SMS, and locations. Customize the colors, export the result in HD, and share or print it. Premium lifts the limits on customization, history, and export quality, and removes ads.</p>
+        <p>No account, no sign-up, and nothing you scan ever leaves your phone. Scanning and generating happen on the device, so both work with no internet connection. The app follows your system theme, comes in 11 languages, and shows ads unless you go Premium.</p>
+      </div>
+      <button class="read-more" id="readMore" type="button" aria-expanded="false" aria-controls="aboutDesc">Read more</button>
       <div class="chip-row" aria-label="Categories">
         <span class="chip">QR scanner</span><span class="chip">Barcode</span><span class="chip">QR generator</span><span class="chip">Offline</span><span class="chip">Privacy</span><span class="chip">Android</span>
       </div>
@@ -181,10 +190,10 @@
 
       <aside class="store-side">
         <div class="rating-box">
-          <span class="rating-badge" aria-hidden="true">12+</span>
+          <span class="rating-badge" aria-hidden="true">3+</span>
           <div class="rating-info">
-            <p class="rating-title">Rated for 12+</p>
-            <p class="rating-sub">Parental Guidance Recommended</p>
+            <p class="rating-title">Rated for 3+</p>
+            <p class="rating-sub">Suitable for all ages</p>
           </div>
         </div>
         <details class="support-box">
@@ -262,23 +271,6 @@
     </div>
   </section>
 
-  <section id="app-codesnap-whats-new">
-    <h3 class="section-h">What's New for CodeSnap</h3>
-    <div class="page-section">
-      <h4>Version 1.0</h4>
-      <ul>
-        <li>QR Code Scanner: Scan any QR code or barcode instantly with your camera</li>
-        <li>QR Code Generator: Create QR codes for text, URLs, Wi-Fi, contacts, email, phone, SMS, and locations</li>
-        <li>Barcode Generator: Create EAN-8, EAN-13, UPC-A, UPC-E, Code 39, Code 93, Code 128, ITF, PDF417, Codabar, Data Matrix, and Aztec barcodes</li>
-        <li>Save to Gallery: Save scanned QR codes directly to your device gallery</li>
-        <li>Dark &amp; Light Theme: Automatically follows your system theme</li>
-        <li>11 Languages: English, Arabic, German, Spanish, French, Hindi, Italian, Japanese, Korean, Portuguese, and Chinese</li>
-        <li>Premium: Full QR &amp; appearance customization, unlimited history, HD export, and ad-free experience</li>
-        <li>Crash Reporting: Firebase Crashlytics for automatic crash detection</li>
-      </ul>
-    </div>
-  </section>
-
 </main>
 
 <footer>
@@ -297,7 +289,6 @@
           <h4>CodeSnap</h4>
           <ul>
             <li><a href="#app-codesnap">Overview</a></li>
-            <li><a href="#app-codesnap-whats-new">What's New</a></li>
             <li><a href="#app-codesnap-privacy">Privacy Policy</a></li>
             <li><a href="#app-codesnap-terms">Terms of Service</a></li>
           </ul>
@@ -320,6 +311,14 @@
     </div>
   </div>
 </footer>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Screenshot viewer">
+  <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Close viewer"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg></button>
+  <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg></button>
+  <img class="lb-img" id="lbImg" alt="">
+  <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Next screenshot"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></button>
+  <div class="lb-count" id="lbCount" aria-live="polite"></div>
+</div>
 
 <script src="script.js"></script>
 </body>
