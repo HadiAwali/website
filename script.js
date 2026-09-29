@@ -43,6 +43,35 @@
   window.addEventListener('hashchange', render);
   render();
 
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('nav');
+  if(navToggle && navMenu){
+    const setNav = open =>{
+      navMenu.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+    };
+    navToggle.addEventListener('click', ()=>{
+      setNav(!navMenu.classList.contains('open'));
+    });
+    navMenu.addEventListener('click', e=>{
+      if(e.target.closest('a')) setNav(false);
+    });
+    document.addEventListener('click', e=>{
+      if(!navMenu.classList.contains('open')) return;
+      if(e.target.closest('#nav, #navToggle')) return;
+      setNav(false);
+    });
+    document.addEventListener('keydown', e=>{
+      if(e.key === 'Escape' && navMenu.classList.contains('open')){
+        setNav(false);
+        navToggle.focus();
+      }
+    });
+    window.addEventListener('resize', ()=>{
+      if(window.innerWidth > 680) setNav(false);
+    }, {passive:true});
+  }
+
   const contactForm = document.getElementById('contactForm');
   if(contactForm){
     contactForm.addEventListener('submit', function(e){
