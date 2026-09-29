@@ -50,10 +50,10 @@ https://hadiawali.github.io/website/#app-codesnap-whats-new
 ## Header / responsive nav
 
 - ≥681px wide: inline `Home · About · Contact` links, hamburger button hidden.
-- ≤680px: `.nav-toggle` hamburger replaces them; `#nav` becomes a floating dropdown card toggled with the `.open` class.
-- Toggle logic in `script.js` (nav id `navToggle`): click to open, and it closes on link click, outside click, `Escape` (focus returns to the button), and on resize past the breakpoint.
+- ≤680px: `.nav-toggle` hamburger replaces them; `#nav` becomes a full-screen fixed overlay toggled with the `.open` class. Big numbered links (`01`/`02`/`03`) stagger in; the logo and toggle sit above it via `z-index:2`.
+- Toggle logic in `script.js` (nav id `navToggle`): click to open, and it closes on link click, backdrop tap (`e.target === navMenu`), `Escape` (focus returns to the button), logo click, and on resize past the breakpoint. Open state also sets `body.nav-locked` (scroll lock, and it strips the header's `backdrop-filter` — that filter would otherwise become the containing block for the overlay's `position:fixed`, trapping it inside the header).
 - The breakpoint exists in **two** places that must stay in sync: the `@media (max-width:680px)` block in `style.css` and the `window.innerWidth > 680` check in `script.js`.
-- `header` is `position:sticky`; the dropdown is absolutely positioned against it.
+- `header` is `position:sticky`; the overlay is `position:fixed` against the viewport (the logo/toggle stay clickable above it because they get `z-index:2` inside the header's stacking context).
 
 ## Conventions
 

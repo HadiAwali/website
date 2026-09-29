@@ -48,6 +48,7 @@
   if(navToggle && navMenu){
     const setNav = open =>{
       navMenu.classList.toggle('open', open);
+      document.body.classList.toggle('nav-locked', open);
       navToggle.setAttribute('aria-expanded', String(open));
     };
     navToggle.addEventListener('click', ()=>{
@@ -55,11 +56,7 @@
     });
     navMenu.addEventListener('click', e=>{
       if(e.target.closest('a')) setNav(false);
-    });
-    document.addEventListener('click', e=>{
-      if(!navMenu.classList.contains('open')) return;
-      if(e.target.closest('#nav, #navToggle')) return;
-      setNav(false);
+      else if(e.target === navMenu) setNav(false); // tap the empty backdrop
     });
     document.addEventListener('keydown', e=>{
       if(e.key === 'Escape' && navMenu.classList.contains('open')){
@@ -70,6 +67,9 @@
     window.addEventListener('resize', ()=>{
       if(window.innerWidth > 680) setNav(false);
     }, {passive:true});
+    // the logo sits above the overlay, so it must also dismiss it
+    const logo = document.querySelector('.logo');
+    if(logo) logo.addEventListener('click', ()=> setNav(false));
   }
 
   const contactForm = document.getElementById('contactForm');
