@@ -108,8 +108,8 @@
       card.className = 'screenshot';
       const img = document.createElement('img');
       img.alt = `App screenshot ${i}`;
-      img.width = 350;
-      img.height = 759;
+      img.width = 700;
+      img.height = 1517;
       img.draggable = false;
       img.decoding = 'async';
       img.addEventListener('load', ()=>{ card.classList.add('loaded'); showcase.dispatchEvent(new Event('scroll')); });
