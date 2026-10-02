@@ -17,7 +17,7 @@ Related project (do not confuse): `C:\Users\hadir\AndroidStudioProjects\CodeSnap
 
 - Plain HTML + CSS + vanilla JS. **No build step, no package.json, no framework, no bundler.** Do not introduce one.
 - Google Fonts only (Space Grotesk, Inter, JetBrains Mono), loaded from the CDN.
-- Everything is one page: `index.html`, `style.css`, `script.js`, `assets/showcase/*.webp`.
+- Everything is one page: `index.html`, `style.css`, `script.js`, `assets/` (logo SVGs + `showcase/*.webp`).
 - Deploy = `git push origin main`; GitHub Pages builds it. No CI.
 
 ## File map
@@ -28,6 +28,8 @@ Related project (do not confuse): `C:\Users\hadir\AndroidStudioProjects\CodeSnap
 | `style.css` | All styling. Design tokens live in `:root` (dark theme, `--accent:#9B6BF9`). |
 | `script.js` | Hash router (`render()`), mobile nav, screenshot showcase + lightbox, contact form, "Read more" toggle. |
 | `assets/showcase/1..5.webp` | App screenshots, 350×759, injected by `script.js`. |
+| `assets/logo-mark.svg` | Studio icon (navy tile, dashed circle + diamond). Header logo left half and the favicon. Source: Inkscape export, unchanged. |
+| `assets/logo-wordmark.svg` | "Northline Studio" wordmark. The banner export had ~12% padding and a 4096×2304 `width`/`height`, so its `viewBox` was cropped to `196 228.6 833 155.9` and `width`/`height` set to `833`/`155.9` — **keep those three attributes in sync**, otherwise `width:auto` in `.logo-word` computes the wrong box. Both logo images are the same navy `#141b2e`, so `.logo` uses `gap:0` and only the outer corners are rounded. |
 | `.gitignore` | Keeps agent verification screenshots (`_*.png`, `shot*.png`, …) out of the repo. Never force-add them. |
 
 ## Routing contract — do not break
