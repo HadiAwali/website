@@ -2,7 +2,7 @@
 
 ## What this project is
 
-A static, single-page marketing/legal site for **Northline Studio** (a solo Android app brand). It holds:
+A static, single-page marketing/legal site for **Northline Studio** (an independent Android app brand). It holds:
 
 - the studio home / About / Contact sections,
 - a Play-Store-style listing for the **CodeSnap** app (screenshots, What's new, About this app),
@@ -61,6 +61,7 @@ https://hadiawali.github.io/website/#app-codesnap-whats-new
 - Styling through the CSS variables in `:root`; don't hardcode colors.
 - Commit messages in history use a short lowercase scope prefix plus an imperative summary: `ui:`, `content:`, `style:`, `chore:`, `header:`.
 - Keep copy human and plain — earlier passes deliberately de-formalized the text.
+- The site speaks in the first-person plural: **we / us / our**. Never `I`, `me`, `my`, `myself`, and never describe the studio as one person, solo, or "just me".
 - Fixed contact/links: `northline.studio.developer@gmail.com`, Play Store id `com.hadiawali.codesnap`, GitHub `HadiAwali`.
 - **Always push when the work is done** — commit with the scoped prefix and `git push origin main` without asking. Don't leave changes sitting in the working tree.
 
