@@ -19,11 +19,11 @@ header{position:sticky; top:0; z-index:10; padding-top:calc(18px + env(safe-area
    the full-screen menu into the header's box the instant it starts closing. */
 header::before{content:''; position:absolute; inset:0; z-index:-1; background:rgba(18,18,18,.9); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); pointer-events:none;}
 header .wrap{display:flex; align-items:center; justify-content:space-between;}
+/* Both logo images are transparent: the icon's ring padding plus the
+   wordmark's own side padding supply the optical gap, so gap stays 0. */
 .logo{display:flex; align-items:center; gap:0; cursor:pointer;}
-/* Both images are the same navy (#141b2e), so with zero gap they read as a
-   single badge: only the outer corners get rounded. */
-.logo-mark{width:28px; height:28px; display:block; flex-shrink:0; border-radius:8px 0 0 8px;}
-.logo-word{height:28px; width:auto; display:block; border-radius:0 8px 8px 0;}
+.logo-mark{width:28px; height:28px; display:block; flex-shrink:0;}
+.logo-word{height:28px; width:auto; display:block;}
 nav{display:flex; gap:28px;}
 nav a{font-size:.95rem; color:var(--text-dim); text-decoration:none; transition:color .15s;}
 nav a:hover, nav a.active{color:var(--text);}
