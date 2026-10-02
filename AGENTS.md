@@ -1,8 +1,8 @@
-# AGENTS.md — Hadi Studio website
+# AGENTS.md — Northline Studio website
 
 ## What this project is
 
-A static, single-page marketing/legal site for **Hadi Studio** (Hadi Awali's solo Android app brand). It holds:
+A static, single-page marketing/legal site for **Northline Studio** (a solo Android app brand). It holds:
 
 - the studio home / About / Contact sections,
 - a Play-Store-style listing for the **CodeSnap** app (screenshots, What's new, About this app),
