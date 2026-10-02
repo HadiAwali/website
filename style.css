@@ -68,10 +68,16 @@ h2.section-title{font-size:1.7rem; margin:0 0 8px; font-weight:600;}
 .card-body p{margin:0; color:var(--text-dim); font-size:.88rem;}
 .card-body .tag{align-self:flex-start; margin-top:6px; font-size:.7rem; color:var(--text-dim); background:var(--surface-2); padding:3px 9px; border-radius:20px;}
 
-.about-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:36px;}
+.about-head{display:flex; align-items:center; gap:26px; margin-bottom:36px;}
+.about-mark{width:120px; height:120px; flex-shrink:0; display:block;}
+.about-head-copy .section-title{margin:0 0 8px;}
+.about-head-copy .section-sub{margin:0;}
+.about-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:20px;}
+.skill-block{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:18px 20px 20px;}
 .skill-block h3{font-size:1rem; color:var(--accent); margin:0 0 10px;}
 .skill-block ul{margin:0; padding-left:18px; color:var(--text-dim); font-size:.95rem;}
 .skill-block li{margin-bottom:6px;}
+.skill-block li:last-child{margin-bottom:0;}
 
 form{display:grid; gap:14px; max-width:480px;}
 label{font-size:.85rem; color:var(--text-dim); margin-bottom:4px; display:block;}
@@ -242,6 +248,8 @@ footer{border-top:1px solid var(--border); background:var(--surface); padding:46
 
 @media (max-width:680px){
   .hero{grid-template-columns:1fr;} .hero .stage{display:none;} .about-grid{grid-template-columns:1fr;}
+  .about-head{flex-direction:column; align-items:flex-start; gap:18px;}
+  .about-mark{width:96px; height:96px;}
   .nav-toggle{display:grid; position:relative; z-index:2;}
   .logo{position:relative; z-index:2;} /* stays visible above the overlay */
 
