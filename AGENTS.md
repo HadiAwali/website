@@ -8,8 +8,8 @@ A static, single-page marketing/legal site for **Northline Studio** (an independ
 - a Play-Store-style listing for the **CodeSnap** app (screenshots, What's new, About this app),
 - the app's **hosted Privacy Policy and Terms of Service**, which the Android app opens in a browser tab.
 
-Live at <https://hadiawali.github.io/website/> (GitHub Pages, deployed from `main`).
-Repo: <https://github.com/HadiAwali/website> — local clone: `C:\Users\hadir\AndroidStudioProjects\website`.
+Live at <https://studio-northline.github.io/website/> (GitHub Pages, deployed from `main`).
+Repo: <https://github.com/Studio-Northline/website> — local clone: `C:\Users\hadir\AndroidStudioProjects\website`.
 
 Related project (do not confuse): `C:\Users\hadir\AndroidStudioProjects\CodeSnap` is the Android app itself. It used to contain a `/website` folder; that copy was removed — the site lives only here, and the app just links to it.
 
@@ -42,10 +42,12 @@ Hash-based routing, driven by `routes` and `render()` at the top of `script.js`:
 **The Android app deep-links to exactly these URLs** (from `AboutHelper.kt` in the CodeSnap repo), so they are a public contract:
 
 ```
-https://hadiawali.github.io/website/#privacy
-https://hadiawali.github.io/website/#app-codesnap-terms
-https://hadiawali.github.io/website/#app-codesnap-whats-new
+https://studio-northline.github.io/website/#privacy
+https://studio-northline.github.io/website/#app-codesnap-terms
+https://studio-northline.github.io/website/#app-codesnap-whats-new
 ```
+
+The repo moved from `HadiAwali` to the `Studio-Northline` org, so `hadiawali.github.io/website/*` now 404s. **`AboutHelper.kt` in the CodeSnap repo still points at the old URLs and must be updated**, or the in-app Privacy Policy / Terms / What's new links stay broken.
 
 ## Header / responsive nav
 
@@ -72,4 +74,4 @@ No test suite. Before pushing:
 1. Open `index.html` directly (`file://`) or serve the folder with any static server.
 2. Check both a 390px and a 1280px viewport: hamburger open/close on narrow, inline links on wide.
 3. Confirm `#privacy`, `#app-codesnap-terms`, and `#app-codesnap-whats-new` still land on the right section.
-4. After pushing, Pages deploys in about a minute: <https://hadiawali.github.io/website/>
+4. After pushing, Pages deploys in about a minute: <https://studio-northline.github.io/website/>
