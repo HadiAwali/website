@@ -1,8 +1,8 @@
 :root{
   --bg:#121212; --surface:#1E1E1E; --surface-2:#2A2A2A;
   --text:#E8E8E8; --text-dim:#9E9E9E; --border:#333333;
-  --accent:#9B6BF9; --accent-soft:#9B6BF922;
-  --amber:#FFB454; --amber-soft:#FFB45422;
+  --accent:#34d399; --accent-soft:#34d39922;
+  --blue:#2563eb;
   box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
 html{scroll-padding-top:env(safe-area-inset-top,0px);}
@@ -51,7 +51,7 @@ section.active{display:block; animation:fade .3s ease;}
 .term .body{padding:14px; font-family:'JetBrains Mono',monospace; font-size:.74rem; line-height:1.9; color:var(--text-dim);}
 .term .prompt{color:var(--accent);}
 .term .out{color:var(--text);}
-.term .cursor{display:inline-block; width:7px; height:14px; background:var(--amber); vertical-align:middle; animation:blink 1s step-start infinite;}
+.term .cursor{display:inline-block; width:7px; height:14px; background:var(--blue); vertical-align:middle; animation:blink 1s step-start infinite;}
 @keyframes blink{50%{opacity:0;}}
 
 h2.section-title{font-size:1.7rem; margin:0 0 8px; font-weight:600;}
@@ -209,7 +209,7 @@ button.submit{padding:11px 22px; background:var(--accent); color:#121212; border
 .quick-card{border:1px solid var(--border); border-radius:10px; padding:16px 18px; background:var(--surface-2);}
 .quick-card h5{margin:0 0 10px; font-size:.85rem; display:flex; align-items:center; gap:8px; color:var(--text);}
 .quick-card h5 svg{width:16px; height:16px; flex-shrink:0;}
-.quick-card.yes h5 svg{stroke:var(--amber);}
+.quick-card.yes h5 svg{stroke:var(--blue);}
 .quick-card.no h5 svg{stroke:var(--accent);}
 .quick-card ul{margin:0; padding-left:18px;}
 .quick-card li{font-size:.86rem; margin-bottom:6px; line-height:1.55;}

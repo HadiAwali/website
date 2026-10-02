@@ -25,7 +25,7 @@ Related project (do not confuse): `C:\Users\hadir\AndroidStudioProjects\CodeSnap
 | File | Role |
 | --- | --- |
 | `index.html` | All markup: sticky header + nav, every section, footer, screenshot lightbox. One small inline `<script>` for the CodeSnap share button. |
-| `style.css` | All styling. Design tokens live in `:root` (dark theme, `--accent:#9B6BF9`). |
+| `style.css` | All styling. Design tokens live in `:root` (dark theme, `--accent:#34d399` green + `--blue:#2563eb`, the two logo colours). |
 | `script.js` | Hash router (`render()`), mobile nav, screenshot showcase + lightbox, contact form, "Read more" toggle. |
 | `assets/showcase/1..5.webp` | App screenshots, 350×759, injected by `script.js`. |
 | `assets/logo-mark.svg` | Studio icon — dashed circle + diamond, no background. Header logo left half and the favicon. Source: Inkscape export; only its navy backdrop rect was deleted. |
