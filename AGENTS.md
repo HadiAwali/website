@@ -67,6 +67,7 @@ The repo moved from `HadiAwali` to the `Studio-Northline` org, so `hadiawali.git
 - Keep copy human and plain — earlier passes deliberately de-formalized the text.
 - The site speaks in the first-person plural: **we / us / our**. Never `I`, `me`, `my`, `myself`, and never describe the studio as one person, solo, or "just me".
 - Fixed contact/links: `northline.studio.developer@gmail.com`, Play Store id `com.hadiawali.codesnap`, GitHub `Studio-Northline`.
+- **No open-source licence.** `LICENSE` reserves everything to Northline Studio — public repo ≠ free to use. Never add, swap in, or suggest an OSS licence (MIT, Apache, GPL…).
 - **Always push when the work is done** — commit with the scoped prefix and `git push origin main` without asking. Don't leave changes sitting in the working tree.
 
 ## Verifying changes
