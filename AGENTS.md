@@ -29,7 +29,7 @@ Related project (do not confuse): `C:\Users\hadir\AndroidStudioProjects\CodeSnap
 | `script.js` | Hash router (`render()`), mobile nav, screenshot showcase + lightbox, contact form, "Read more" toggle. |
 | `assets/showcase/1..5.webp` | App screenshots, 700×1517, injected by `script.js`. |
 | `assets/logo-mark.svg` | Studio icon — dashed circle + diamond, no background. Header logo left half and the favicon. Source: Inkscape export; only its navy backdrop rect was deleted. |
-| `assets/logo-wordmark.svg` | "Northline Studio" wordmark, no background. The banner export had ~12% padding and a 4096×2304 `width`/`height`, so its `viewBox` was cropped to `196 228.6 833 155.9` and `width`/`height` set to `833`/`155.9` — **keep those three attributes in sync**, otherwise `width:auto` in `.logo-word` computes the wrong box. Its navy backdrop rect was removed too, and the leftover side padding is what separates the two images, so `.logo` keeps `gap:0`. |
+| `assets/logo-wordmark.svg` | "Northline Studio" wordmark, no background. The banner export had ~12% padding and a 4096×2304 `width`/`height`, so its `viewBox` was cropped to `196 228.6 903 155.9` and `width`/`height` set to `903`/`155.9` — **keep those three attributes in sync**, otherwise `width:auto` in `.logo-word` computes the wrong box. Its navy backdrop rect was removed too, and the leftover side padding is what separates the two images, so `.logo` keeps `gap:0`. Text is `font-weight:700`; bold runs ~9% wider than regular (823 vs 753 user units), which is why the box is 903 wide — re-measure `getBBox()` if the weight or size ever changes. |
 | `.gitignore` | Keeps agent verification screenshots (`_*.png`, `shot*.png`, …) out of the repo. Never force-add them. |
 
 ## Routing contract — do not break
