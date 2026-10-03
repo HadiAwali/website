@@ -16,7 +16,7 @@ Related project (do not confuse): `C:\Users\hadir\AndroidStudioProjects\CodeSnap
 ## Stack and constraints
 
 - Plain HTML + CSS + vanilla JS. **No build step, no package.json, no framework, no bundler.** Do not introduce one.
-- Google Fonts only (Space Grotesk, Inter, JetBrains Mono), loaded from the CDN.
+- Text and headings use the system **Helvetica** stack (`Helvetica, Arial, sans-serif`); only **JetBrains Mono** (terminal, code, nav index) is loaded from Google Fonts. No other web fonts.
 - Everything is one page: `index.html`, `style.css`, `script.js`, `assets/` (logo SVGs + `showcase/*.webp`).
 - Deploy = `git push origin main`; GitHub Pages builds it. No CI.
 
